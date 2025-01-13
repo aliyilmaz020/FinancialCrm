@@ -8,36 +8,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FinancialCrm
 {
-    public partial class FrmLogin : Form
+    public partial class FrmCreateAccount : Form
     {
-        public FrmLogin()
+        public FrmCreateAccount()
         {
             InitializeComponent();
         }
         FinancialCrmDbEntities db = new FinancialCrmDbEntities();
-        private void FrmLogin_Load(object sender, EventArgs e)
+        private void FrmCreateAccount_Load(object sender, EventArgs e)
         {
+
         }
-        private void BtnLogin_Click(object sender, EventArgs e)
+        private void BtnCreateAccount_Click(object sender, EventArgs e)
         {
-            string user = TxtUserName.Text;
+            string username = TxtUserName.Text;
             string password = TxtPassword.Text;
-            var userControl = db.Users.Any(x => x.Username == user && x.Password == password);
-            if (userControl)
+            if (username != "" && password != "" && username != "Kullanıcı Adı" && password != "Şifre")
             {
-                FrmBanks frm = new FrmBanks();
-                frm.Show();
-                this.Hide();
+                Users user = new Users();
+                user.Username = username;
+                user.Password = password;
+                db.Users.Add(user);
+                db.SaveChanges();
+                MessageBox.Show("Hesabınız Oluşturuldu", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Kullanıcı adı ya da şifre hatalıdır.\nTekrar deneyiniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Eksik bir tuşlama yapıldı.\nTekrar deneyiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
 
         private void PbClose_Click(object sender, EventArgs e)
         {
@@ -54,7 +57,7 @@ namespace FinancialCrm
             if (TxtUserName.Text == "Kullanıcı Adı")
             {
                 TxtUserName.Text = "";
-                TxtUserName.ForeColor = Color.White; // Yazı rengini varsayılan hale getir
+                TxtUserName.ForeColor = Color.Black; // Yazı rengini varsayılan hale getir
             }
         }
 
@@ -69,11 +72,11 @@ namespace FinancialCrm
 
         private void TxtPassword_Enter(object sender, EventArgs e)
         {
-            if(TxtPassword.Text == "Şifre")
+            if (TxtPassword.Text == "Şifre")
             {
                 TxtPassword.UseSystemPasswordChar = true;
                 TxtPassword.Text = "";
-                TxtPassword.ForeColor = Color.White;
+                TxtPassword.ForeColor = Color.Black;
             }
         }
 
@@ -85,13 +88,6 @@ namespace FinancialCrm
                 TxtPassword.Text = "Şifre";
                 TxtPassword.ForeColor = Color.Gray;
             }
-        }
-
-        private void LnkCreateAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            FrmCreateAccount frm = new FrmCreateAccount();
-            frm.Show();
-            this.Hide();
         }
     }
 }

@@ -35,9 +35,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnLogout = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.BtnSettings = new System.Windows.Forms.Button();
             this.BtnDashboard = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.BtnBankProcesses = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.BtnBanks = new System.Windows.Forms.Button();
@@ -118,9 +118,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(90)))), ((int)(((byte)(232)))));
             this.panel1.Controls.Add(this.BtnLogout);
-            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.BtnSettings);
             this.panel1.Controls.Add(this.BtnDashboard);
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.BtnBankProcesses);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.BtnBanks);
@@ -142,16 +142,17 @@
             this.BtnLogout.UseVisualStyleBackColor = true;
             this.BtnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
-            // button7
+            // BtnSettings
             // 
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(35, 353);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(192, 39);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Ayarlar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.BtnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSettings.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnSettings.Location = new System.Drawing.Point(35, 353);
+            this.BtnSettings.Name = "BtnSettings";
+            this.BtnSettings.Size = new System.Drawing.Size(192, 39);
+            this.BtnSettings.TabIndex = 6;
+            this.BtnSettings.Text = "Ayarlar";
+            this.BtnSettings.UseVisualStyleBackColor = true;
+            this.BtnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
             // 
             // BtnDashboard
             // 
@@ -165,19 +166,22 @@
             this.BtnDashboard.UseVisualStyleBackColor = true;
             this.BtnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             // 
-            // button5
+            // BtnBankProcesses
             // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(35, 263);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(192, 39);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Banka Hareketleri";
-            this.button5.UseVisualStyleBackColor = true;
+            this.BtnBankProcesses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBankProcesses.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnBankProcesses.Location = new System.Drawing.Point(35, 263);
+            this.BtnBankProcesses.Name = "BtnBankProcesses";
+            this.BtnBankProcesses.Size = new System.Drawing.Size(192, 39);
+            this.BtnBankProcesses.TabIndex = 4;
+            this.BtnBankProcesses.Text = "Banka Hareketleri";
+            this.BtnBankProcesses.UseVisualStyleBackColor = true;
+            this.BtnBankProcesses.Click += new System.EventHandler(this.BtnBankProcesses_Click);
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button4.Enabled = false;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Location = new System.Drawing.Point(35, 218);
@@ -185,7 +189,7 @@
             this.button4.Size = new System.Drawing.Size(192, 39);
             this.button4.TabIndex = 3;
             this.button4.Text = "Giderler";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -418,9 +422,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnLogout;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button BtnSettings;
         private System.Windows.Forms.Button BtnDashboard;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button BtnBankProcesses;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button BtnBanks;

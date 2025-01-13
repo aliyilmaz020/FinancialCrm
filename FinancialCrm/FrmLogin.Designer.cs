@@ -38,6 +38,7 @@
             this.BtnLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.LnkCreateAccount = new System.Windows.Forms.LinkLabel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbClose)).BeginInit();
@@ -130,11 +131,12 @@
             this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnLogin.ForeColor = System.Drawing.SystemColors.Control;
-            this.BtnLogin.Location = new System.Drawing.Point(475, 247);
+            this.BtnLogin.Location = new System.Drawing.Point(405, 259);
             this.BtnLogin.Name = "BtnLogin";
-            this.BtnLogin.Size = new System.Drawing.Size(139, 41);
+            this.BtnLogin.Size = new System.Drawing.Size(209, 41);
             this.BtnLogin.TabIndex = 9;
             this.BtnLogin.Text = "Giriş Yap";
+            this.BtnLogin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnLogin.UseVisualStyleBackColor = false;
             this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
@@ -160,6 +162,22 @@
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
+            // LnkCreateAccount
+            // 
+            this.LnkCreateAccount.ActiveLinkColor = System.Drawing.Color.MediumVioletRed;
+            this.LnkCreateAccount.AutoSize = true;
+            this.LnkCreateAccount.BackColor = System.Drawing.Color.Transparent;
+            this.LnkCreateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LnkCreateAccount.ForeColor = System.Drawing.Color.MediumVioletRed;
+            this.LnkCreateAccount.LinkColor = System.Drawing.Color.White;
+            this.LnkCreateAccount.Location = new System.Drawing.Point(472, 314);
+            this.LnkCreateAccount.Name = "LnkCreateAccount";
+            this.LnkCreateAccount.Size = new System.Drawing.Size(181, 25);
+            this.LnkCreateAccount.TabIndex = 12;
+            this.LnkCreateAccount.TabStop = true;
+            this.LnkCreateAccount.Text = "Yeni Hesap Oluştur";
+            this.LnkCreateAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkCreateAccount_LinkClicked);
+            // 
             // FrmLogin
             // 
             this.AcceptButton = this.BtnLogin;
@@ -170,6 +188,7 @@
             this.BackgroundImage = global::FinancialCrm.Properties.Resources.blue_digital_technology_background_with_white_building_logo_bank_666034_682;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(659, 386);
+            this.Controls.Add(this.LnkCreateAccount);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnLogin);
@@ -208,5 +227,6 @@
         private System.Windows.Forms.TextBox TxtPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.LinkLabel LnkCreateAccount;
     }
 }

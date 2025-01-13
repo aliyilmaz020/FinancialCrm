@@ -52,10 +52,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.PbMinimize = new System.Windows.Forms.PictureBox();
+            this.PbClose = new System.Windows.Forms.PictureBox();
+            this.BtnLogout = new System.Windows.Forms.Button();
+            this.BtnSettings = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.BtnBankProcesses = new System.Windows.Forms.Button();
             this.BtnBillForm = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.BtnBanks = new System.Windows.Forms.Button();
@@ -68,19 +70,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.PbMinimize = new System.Windows.Forms.PictureBox();
-            this.PbClose = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).BeginInit();
             this.SuspendLayout();
             // 
             // LblBankProcess5
@@ -248,30 +248,58 @@
             this.panel2.Size = new System.Drawing.Size(1169, 46);
             this.panel2.TabIndex = 20;
             // 
-            // button8
+            // PbMinimize
             // 
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Location = new System.Drawing.Point(35, 398);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(192, 39);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Çıkış Yap";
-            this.button8.UseVisualStyleBackColor = true;
+            this.PbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PbMinimize.Image = global::FinancialCrm.Properties.Resources.icons8_minimize_50;
+            this.PbMinimize.Location = new System.Drawing.Point(1041, 0);
+            this.PbMinimize.Name = "PbMinimize";
+            this.PbMinimize.Size = new System.Drawing.Size(57, 43);
+            this.PbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbMinimize.TabIndex = 11;
+            this.PbMinimize.TabStop = false;
+            this.PbMinimize.Click += new System.EventHandler(this.PbMinimize_Click);
             // 
-            // button7
+            // PbClose
             // 
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(35, 353);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(192, 39);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Ayarlar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.PbClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PbClose.Image = global::FinancialCrm.Properties.Resources.icons8_close_window_96;
+            this.PbClose.Location = new System.Drawing.Point(1104, 0);
+            this.PbClose.Name = "PbClose";
+            this.PbClose.Size = new System.Drawing.Size(57, 43);
+            this.PbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbClose.TabIndex = 10;
+            this.PbClose.TabStop = false;
+            this.PbClose.Click += new System.EventHandler(this.PbClose_Click);
+            // 
+            // BtnLogout
+            // 
+            this.BtnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnLogout.Location = new System.Drawing.Point(35, 398);
+            this.BtnLogout.Name = "BtnLogout";
+            this.BtnLogout.Size = new System.Drawing.Size(192, 39);
+            this.BtnLogout.TabIndex = 7;
+            this.BtnLogout.Text = "Çıkış Yap";
+            this.BtnLogout.UseVisualStyleBackColor = true;
+            this.BtnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
+            // 
+            // BtnSettings
+            // 
+            this.BtnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSettings.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnSettings.Location = new System.Drawing.Point(35, 353);
+            this.BtnSettings.Name = "BtnSettings";
+            this.BtnSettings.Size = new System.Drawing.Size(192, 39);
+            this.BtnSettings.TabIndex = 6;
+            this.BtnSettings.Text = "Ayarlar";
+            this.BtnSettings.UseVisualStyleBackColor = true;
+            this.BtnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button6.Enabled = false;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button6.Location = new System.Drawing.Point(35, 308);
@@ -279,18 +307,19 @@
             this.button6.Size = new System.Drawing.Size(192, 39);
             this.button6.TabIndex = 5;
             this.button6.Text = "Dashboard";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // BtnBankProcesses
             // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(35, 263);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(192, 39);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Banka Hareketleri";
-            this.button5.UseVisualStyleBackColor = true;
+            this.BtnBankProcesses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBankProcesses.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnBankProcesses.Location = new System.Drawing.Point(35, 263);
+            this.BtnBankProcesses.Name = "BtnBankProcesses";
+            this.BtnBankProcesses.Size = new System.Drawing.Size(192, 39);
+            this.BtnBankProcesses.TabIndex = 4;
+            this.BtnBankProcesses.Text = "Banka Hareketleri";
+            this.BtnBankProcesses.UseVisualStyleBackColor = true;
+            this.BtnBankProcesses.Click += new System.EventHandler(this.BtnBankProcesses_Click);
             // 
             // BtnBillForm
             // 
@@ -341,10 +370,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(90)))), ((int)(((byte)(232)))));
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.BtnLogout);
+            this.panel1.Controls.Add(this.BtnSettings);
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.BtnBankProcesses);
             this.panel1.Controls.Add(this.BtnBillForm);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.BtnBanks);
@@ -434,30 +463,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Ödenen ve ödenmeyen faturalara aşağıdaki \r\ngrafikten ulaşabilirsiniz.";
             // 
-            // PbMinimize
-            // 
-            this.PbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PbMinimize.Image = global::FinancialCrm.Properties.Resources.icons8_minimize_50;
-            this.PbMinimize.Location = new System.Drawing.Point(1041, 0);
-            this.PbMinimize.Name = "PbMinimize";
-            this.PbMinimize.Size = new System.Drawing.Size(57, 43);
-            this.PbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbMinimize.TabIndex = 11;
-            this.PbMinimize.TabStop = false;
-            this.PbMinimize.Click += new System.EventHandler(this.PbMinimize_Click);
-            // 
-            // PbClose
-            // 
-            this.PbClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PbClose.Image = global::FinancialCrm.Properties.Resources.icons8_close_window_96;
-            this.PbClose.Location = new System.Drawing.Point(1104, 0);
-            this.PbClose.Name = "PbClose";
-            this.PbClose.Size = new System.Drawing.Size(57, 43);
-            this.PbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbClose.TabIndex = 10;
-            this.PbClose.TabStop = false;
-            this.PbClose.Click += new System.EventHandler(this.PbClose_Click);
-            // 
             // FrmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -495,6 +500,8 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
@@ -502,8 +509,6 @@
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -528,10 +533,10 @@
         private System.Windows.Forms.PictureBox PbClose;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button BtnLogout;
+        private System.Windows.Forms.Button BtnSettings;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button BtnBankProcesses;
         private System.Windows.Forms.Button BtnBillForm;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button BtnBanks;

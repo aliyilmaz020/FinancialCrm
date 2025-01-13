@@ -63,9 +63,29 @@ namespace FinancialCrm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bankkart_debit_cipli_visa_2x {
+            get {
+                object obj = ResourceManager.GetObject("bankkart_debit_cipli_visa@2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap blue_digital_technology_background_with_white_building_logo_bank_666034_682 {
             get {
                 object obj = ResourceManager.GetObject("blue-digital-technology-background-with-white-building-logo-bank_666034-682", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap geometric_gradient_futuristic_background_23_2149116406 {
+            get {
+                object obj = ResourceManager.GetObject("geometric-gradient-futuristic-background_23-2149116406", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +123,39 @@ namespace FinancialCrm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap padlock_create {
+            get {
+                object obj = ResourceManager.GetObject("padlock create", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user {
             get {
                 object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_create {
+            get {
+                object obj = ResourceManager.GetObject("user create", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_create1 {
+            get {
+                object obj = ResourceManager.GetObject("user create1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
