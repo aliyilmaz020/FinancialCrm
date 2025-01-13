@@ -49,7 +49,7 @@ namespace FinancialCrm
             chart2.Series.Clear();
             var series2 = chart2.Series.Add("Faturalar");
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Funnel;
-            foreach(var item in billData)
+            foreach (var item in billData)
             {
                 series2.Points.AddXY(item.BillTitle, item.BillAmount);
             }
@@ -99,6 +99,20 @@ namespace FinancialCrm
                 LblBillAmount.Text = billInternetTitle.ToString() + " ₺";
             }
 
+        }
+
+        private void BtnBank_Click(object sender, EventArgs e)
+        {
+            FrmBanks frm = new FrmBanks();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void BtnBillForm_Click(object sender, EventArgs e)
+        {
+            FrmBilling frm = new FrmBilling();
+            frm.Show();
+            this.Hide();
         }
     }
 }

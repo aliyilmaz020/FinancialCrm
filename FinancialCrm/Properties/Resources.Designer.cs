@@ -63,6 +63,16 @@ namespace FinancialCrm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap blue_digital_technology_background_with_white_building_logo_bank_666034_682 {
+            get {
+                object obj = ResourceManager.GetObject("blue-digital-technology-background-with-white-building-logo-bank_666034-682", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_close_window_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-close-window-96", resourceCulture);
@@ -76,6 +86,26 @@ namespace FinancialCrm.Properties {
         internal static System.Drawing.Bitmap icons8_minimize_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-minimize-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap padlock {
+            get {
+                object obj = ResourceManager.GetObject("padlock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user {
+            get {
+                object obj = ResourceManager.GetObject("user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

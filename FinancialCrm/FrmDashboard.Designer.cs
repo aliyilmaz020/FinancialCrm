@@ -35,6 +35,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDashboard));
             this.LblBankProcess5 = new System.Windows.Forms.Label();
             this.LblBankProcess4 = new System.Windows.Forms.Label();
             this.LblBankProcess3 = new System.Windows.Forms.Label();
@@ -49,8 +50,6 @@
             this.LblTotalBalance = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.PbMinimize = new System.Windows.Forms.PictureBox();
-            this.PbClose = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
@@ -59,7 +58,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.BtnBillForm = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnBanks = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -69,17 +68,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.PbMinimize = new System.Windows.Forms.PictureBox();
+            this.PbClose = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).BeginInit();
             this.SuspendLayout();
             // 
             // LblBankProcess5
@@ -223,30 +224,6 @@
             this.panel3.Size = new System.Drawing.Size(294, 174);
             this.panel3.TabIndex = 21;
             // 
-            // PbMinimize
-            // 
-            this.PbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PbMinimize.Image = global::FinancialCrm.Properties.Resources.icons8_minimize_50;
-            this.PbMinimize.Location = new System.Drawing.Point(1041, 0);
-            this.PbMinimize.Name = "PbMinimize";
-            this.PbMinimize.Size = new System.Drawing.Size(57, 43);
-            this.PbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbMinimize.TabIndex = 11;
-            this.PbMinimize.TabStop = false;
-            this.PbMinimize.Click += new System.EventHandler(this.PbMinimize_Click);
-            // 
-            // PbClose
-            // 
-            this.PbClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PbClose.Image = global::FinancialCrm.Properties.Resources.icons8_close_window_96;
-            this.PbClose.Location = new System.Drawing.Point(1104, 0);
-            this.PbClose.Name = "PbClose";
-            this.PbClose.Size = new System.Drawing.Size(57, 43);
-            this.PbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbClose.TabIndex = 10;
-            this.PbClose.TabStop = false;
-            this.PbClose.Click += new System.EventHandler(this.PbClose_Click);
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -325,6 +302,7 @@
             this.BtnBillForm.TabIndex = 3;
             this.BtnBillForm.Text = "Giderler";
             this.BtnBillForm.UseVisualStyleBackColor = true;
+            this.BtnBillForm.Click += new System.EventHandler(this.BtnBillForm_Click);
             // 
             // button3
             // 
@@ -337,16 +315,17 @@
             this.button3.Text = "Faturalar";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BtnBanks
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(36, 128);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(192, 39);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Bankalar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnBanks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBanks.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnBanks.Location = new System.Drawing.Point(36, 128);
+            this.BtnBanks.Name = "BtnBanks";
+            this.BtnBanks.Size = new System.Drawing.Size(192, 39);
+            this.BtnBanks.TabIndex = 1;
+            this.BtnBanks.Text = "Bankalar";
+            this.BtnBanks.UseVisualStyleBackColor = true;
+            this.BtnBanks.Click += new System.EventHandler(this.BtnBank_Click);
             // 
             // button1
             // 
@@ -368,7 +347,7 @@
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.BtnBillForm);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.BtnBanks);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(-5, 37);
             this.panel1.Name = "panel1";
@@ -455,10 +434,35 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Ödenen ve ödenmeyen faturalara aşağıdaki \r\ngrafikten ulaşabilirsiniz.";
             // 
+            // PbMinimize
+            // 
+            this.PbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PbMinimize.Image = global::FinancialCrm.Properties.Resources.icons8_minimize_50;
+            this.PbMinimize.Location = new System.Drawing.Point(1041, 0);
+            this.PbMinimize.Name = "PbMinimize";
+            this.PbMinimize.Size = new System.Drawing.Size(57, 43);
+            this.PbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbMinimize.TabIndex = 11;
+            this.PbMinimize.TabStop = false;
+            this.PbMinimize.Click += new System.EventHandler(this.PbMinimize_Click);
+            // 
+            // PbClose
+            // 
+            this.PbClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PbClose.Image = global::FinancialCrm.Properties.Resources.icons8_close_window_96;
+            this.PbClose.Location = new System.Drawing.Point(1104, 0);
+            this.PbClose.Name = "PbClose";
+            this.PbClose.Size = new System.Drawing.Size(57, 43);
+            this.PbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbClose.TabIndex = 10;
+            this.PbClose.TabStop = false;
+            this.PbClose.Click += new System.EventHandler(this.PbClose_Click);
+            // 
             // FrmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1169, 568);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
@@ -476,8 +480,11 @@
             this.Controls.Add(this.LblBankProcess2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "FrmDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmDashboard_Load);
             this.panel5.ResumeLayout(false);
@@ -486,8 +493,6 @@
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -497,6 +502,8 @@
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -527,7 +534,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button BtnBillForm;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnBanks;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer timer1;

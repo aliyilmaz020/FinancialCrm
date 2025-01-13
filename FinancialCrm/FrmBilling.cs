@@ -81,5 +81,19 @@ namespace FinancialCrm
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void BtnDashboard_Click(object sender, EventArgs e)
+        {
+            FrmDashboard frm = new FrmDashboard();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void BtnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FrmLogin frm = new FrmLogin();
+            frm.Show();
+        }
     }
 }
