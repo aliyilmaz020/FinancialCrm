@@ -101,7 +101,7 @@ namespace FinancialCrm
             {
                 TxtPassword.UseSystemPasswordChar = false;
                 TxtPassword.Text = "Yeni Şifre";
-                TxtPassword.ForeColor = Color.Gray;
+                TxtPassword.ForeColor = Color.LightGray;
             }
         }
         private void TxtConfirmPassword_Enter(object sender, EventArgs e)
@@ -119,11 +119,25 @@ namespace FinancialCrm
             if (string.IsNullOrWhiteSpace(TxtConfirmPassword.Text))
             {
                 TxtConfirmPassword.UseSystemPasswordChar = false;
-                TxtPassword.ForeColor = Color.Gray;
                 TxtConfirmPassword.Text = "Yeni Şifreyi Onayla";
+                TxtConfirmPassword.ForeColor = Color.LightGray;
             }
         }
 
+        private void BtnCategories_Click(object sender, EventArgs e)
+        {
+            FrmCategories frm = new FrmCategories();
+            frm.username = username;
+            frm.Show();
+            this.Hide();
+        }
 
+        private void BtnSpendings_Click(object sender, EventArgs e)
+        {
+            FrmSpendings frm = new FrmSpendings();
+            frm.username = username;
+            frm.Show();
+            this.Hide();
+        }
     }
 }

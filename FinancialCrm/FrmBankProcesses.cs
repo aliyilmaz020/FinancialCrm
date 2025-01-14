@@ -26,7 +26,7 @@ namespace FinancialCrm
         }
         private void FrmBankProcesses_Load(object sender, EventArgs e)
         {
-            var banks = db.Banks.Select(x=>new
+            var banks = db.Banks.Select(x => new
             {
                 x.BankId,
                 x.BankTitle
@@ -104,6 +104,37 @@ namespace FinancialCrm
             this.WindowState = FormWindowState.Minimized;
         }
 
-        
+        private void BtnFindProcess_Click(object sender, EventArgs e)
+        {
+            DateTime processDate = DateTime.Parse(DtpProcessDate.Text);
+            int bank = int.Parse(CmbBank.SelectedValue.ToString());
+            var findProcess = db.BankProcesses.Where(x => x.ProcessDate == processDate || x.BankId == bank).Join(db.Banks, y => y.BankId, z => z.BankId, (y, z) => new { y, z })
+                .Select(d1 => new
+                {
+                    d1.y.BankProcessId,
+                    d1.y.Description,
+                    d1.y.ProcessDate,
+                    d1.y.ProcessType,
+                    d1.y.Amount,
+                    d1.z.BankTitle
+                }).ToList();
+            dataGridView1.DataSource = findProcess;
+        }
+
+        private void BtnCategories_Click(object sender, EventArgs e)
+        {
+            FrmCategories frm = new FrmCategories();
+            frm.username = username;
+            frm.Show();
+            this.Hide();
+        }
+
+        private void BtnSpendings_Click(object sender, EventArgs e)
+        {
+            FrmSpendings frm = new FrmSpendings();
+            frm.username = username;
+            frm.Show();
+            this.Hide();
+        }
     }
 }

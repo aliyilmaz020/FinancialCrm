@@ -137,5 +137,21 @@ namespace FinancialCrm
             frm.Show();
             this.Hide();
         }
+
+        private void BtnCategories_Click(object sender, EventArgs e)
+        {
+            FrmCategories frm = new FrmCategories();
+            frm.username = username;
+            frm.Show();
+            this.Hide();
+        }
+
+        private void BtnSpendings_Click(object sender, EventArgs e)
+        {
+            FrmSpendings frm = new FrmSpendings();
+            frm.username = username;
+            frm.Show();
+            this.Hide();
+        }
     }
 }

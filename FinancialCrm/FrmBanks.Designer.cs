@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBanks));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnSpendings = new System.Windows.Forms.Button();
             this.BtnLogout = new System.Windows.Forms.Button();
             this.BtnSettings = new System.Windows.Forms.Button();
             this.BtnDashboard = new System.Windows.Forms.Button();
             this.BtnBankProcesses = new System.Windows.Forms.Button();
             this.BtnBillForm = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnCategories = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PbMinimize = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,18 +68,30 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(90)))), ((int)(((byte)(232)))));
+            this.panel1.Controls.Add(this.BtnSpendings);
             this.panel1.Controls.Add(this.BtnLogout);
             this.panel1.Controls.Add(this.BtnSettings);
             this.panel1.Controls.Add(this.BtnDashboard);
             this.panel1.Controls.Add(this.BtnBankProcesses);
             this.panel1.Controls.Add(this.BtnBillForm);
-            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BtnCategories);
             this.panel1.Location = new System.Drawing.Point(0, 36);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(265, 531);
             this.panel1.TabIndex = 0;
+            // 
+            // BtnSpendings
+            // 
+            this.BtnSpendings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSpendings.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnSpendings.Location = new System.Drawing.Point(36, 173);
+            this.BtnSpendings.Name = "BtnSpendings";
+            this.BtnSpendings.Size = new System.Drawing.Size(192, 39);
+            this.BtnSpendings.TabIndex = 8;
+            this.BtnSpendings.Text = "Giderler";
+            this.BtnSpendings.UseVisualStyleBackColor = true;
+            this.BtnSpendings.Click += new System.EventHandler(this.BtnSpendings_Click);
             // 
             // BtnLogout
             // 
@@ -137,20 +149,9 @@
             this.BtnBillForm.Name = "BtnBillForm";
             this.BtnBillForm.Size = new System.Drawing.Size(192, 39);
             this.BtnBillForm.TabIndex = 3;
-            this.BtnBillForm.Text = "Giderler";
+            this.BtnBillForm.Text = "Faturalar";
             this.BtnBillForm.UseVisualStyleBackColor = true;
             this.BtnBillForm.Click += new System.EventHandler(this.BtnBillForm_Click);
-            // 
-            // button3
-            // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(36, 173);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(192, 39);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Faturalar";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -165,16 +166,17 @@
             this.button2.Text = "Bankalar";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // BtnCategories
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(35, 83);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(192, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Kategoriler";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnCategories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCategories.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnCategories.Location = new System.Drawing.Point(35, 83);
+            this.BtnCategories.Name = "BtnCategories";
+            this.BtnCategories.Size = new System.Drawing.Size(192, 39);
+            this.BtnCategories.TabIndex = 0;
+            this.BtnCategories.Text = "Kategoriler";
+            this.BtnCategories.UseVisualStyleBackColor = true;
+            this.BtnCategories.Click += new System.EventHandler(this.BtnCategories_Click);
             // 
             // panel2
             // 
@@ -311,7 +313,6 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Son 7 Banka Hareketi";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // panel3
             // 
@@ -401,8 +402,7 @@
         private System.Windows.Forms.Button BtnDashboard;
         private System.Windows.Forms.Button BtnBankProcesses;
         private System.Windows.Forms.Button BtnBillForm;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnCategories;
         private System.Windows.Forms.Button BtnLogout;
         private System.Windows.Forms.Button BtnSettings;
         private System.Windows.Forms.Panel panel2;
@@ -422,5 +422,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button BtnSpendings;
     }
 }

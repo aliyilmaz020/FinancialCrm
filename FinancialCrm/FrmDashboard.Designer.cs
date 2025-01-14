@@ -58,9 +58,9 @@
             this.button6 = new System.Windows.Forms.Button();
             this.BtnBankProcesses = new System.Windows.Forms.Button();
             this.BtnBillForm = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnSpendings = new System.Windows.Forms.Button();
             this.BtnBanks = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnCategories = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -317,20 +317,21 @@
             this.BtnBillForm.Name = "BtnBillForm";
             this.BtnBillForm.Size = new System.Drawing.Size(192, 39);
             this.BtnBillForm.TabIndex = 3;
-            this.BtnBillForm.Text = "Giderler";
+            this.BtnBillForm.Text = "Faturalar";
             this.BtnBillForm.UseVisualStyleBackColor = true;
             this.BtnBillForm.Click += new System.EventHandler(this.BtnBillForm_Click);
             // 
-            // button3
+            // BtnSpendings
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(36, 173);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(192, 39);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Faturalar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnSpendings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSpendings.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnSpendings.Location = new System.Drawing.Point(36, 173);
+            this.BtnSpendings.Name = "BtnSpendings";
+            this.BtnSpendings.Size = new System.Drawing.Size(192, 39);
+            this.BtnSpendings.TabIndex = 2;
+            this.BtnSpendings.Text = "Giderler";
+            this.BtnSpendings.UseVisualStyleBackColor = true;
+            this.BtnSpendings.Click += new System.EventHandler(this.BtnSpendings_Click);
             // 
             // BtnBanks
             // 
@@ -344,16 +345,17 @@
             this.BtnBanks.UseVisualStyleBackColor = true;
             this.BtnBanks.Click += new System.EventHandler(this.BtnBank_Click);
             // 
-            // button1
+            // BtnCategories
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(35, 83);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(192, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Kategoriler";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnCategories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCategories.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnCategories.Location = new System.Drawing.Point(35, 83);
+            this.BtnCategories.Name = "BtnCategories";
+            this.BtnCategories.Size = new System.Drawing.Size(192, 39);
+            this.BtnCategories.TabIndex = 0;
+            this.BtnCategories.Text = "Kategoriler";
+            this.BtnCategories.UseVisualStyleBackColor = true;
+            this.BtnCategories.Click += new System.EventHandler(this.BtnCategories_Click);
             // 
             // panel1
             // 
@@ -363,9 +365,9 @@
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.BtnBankProcesses);
             this.panel1.Controls.Add(this.BtnBillForm);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.BtnSpendings);
             this.panel1.Controls.Add(this.BtnBanks);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BtnCategories);
             this.panel1.Location = new System.Drawing.Point(-5, 37);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(265, 531);
@@ -524,9 +526,9 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button BtnBankProcesses;
         private System.Windows.Forms.Button BtnBillForm;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BtnSpendings;
         private System.Windows.Forms.Button BtnBanks;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnCategories;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;

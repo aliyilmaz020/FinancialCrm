@@ -41,9 +41,6 @@ namespace FinancialCrm
             targetGroupBox.Location = new Point(0, 0);
             if (targetGroupBox != null)
             {
-                // Mevcut kontrolleri temizle (isteğe bağlı)
-                targetGroupBox.Controls.Clear();
-
                 int yPosition = 36; // İlk Label'ın Y pozisyonu
                 foreach (var bankProcess in bankProcesses)
                 {
@@ -116,9 +113,20 @@ namespace FinancialCrm
             this.Hide();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void BtnCategories_Click(object sender, EventArgs e)
         {
+            FrmCategories frm = new FrmCategories();
+            frm.username = username;
+            frm.Show();
+            this.Hide();
+        }
 
+        private void BtnSpendings_Click(object sender, EventArgs e)
+        {
+            FrmSpendings frm = new FrmSpendings();
+            frm.username = username;
+            frm.Show();
+            this.Hide();
         }
     }
 }

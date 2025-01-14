@@ -37,13 +37,14 @@
             this.BtnDashboard = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.BtnBillForm = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnSpendings = new System.Windows.Forms.Button();
             this.BtnBanks = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnCategories = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TxtBankProcessId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.BtnFindProcess = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.CmbBank = new System.Windows.Forms.ComboBox();
             this.BtnListProcesses = new System.Windows.Forms.Button();
@@ -158,20 +159,21 @@
             this.BtnBillForm.Name = "BtnBillForm";
             this.BtnBillForm.Size = new System.Drawing.Size(192, 39);
             this.BtnBillForm.TabIndex = 3;
-            this.BtnBillForm.Text = "Giderler";
+            this.BtnBillForm.Text = "Faturalar";
             this.BtnBillForm.UseVisualStyleBackColor = true;
             this.BtnBillForm.Click += new System.EventHandler(this.BtnBillForm_Click);
             // 
-            // button3
+            // BtnSpendings
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(36, 173);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(192, 39);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Faturalar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnSpendings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSpendings.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnSpendings.Location = new System.Drawing.Point(36, 173);
+            this.BtnSpendings.Name = "BtnSpendings";
+            this.BtnSpendings.Size = new System.Drawing.Size(192, 39);
+            this.BtnSpendings.TabIndex = 2;
+            this.BtnSpendings.Text = "Giderler";
+            this.BtnSpendings.UseVisualStyleBackColor = true;
+            this.BtnSpendings.Click += new System.EventHandler(this.BtnSpendings_Click);
             // 
             // BtnBanks
             // 
@@ -186,16 +188,17 @@
             this.BtnBanks.UseVisualStyleBackColor = false;
             this.BtnBanks.Click += new System.EventHandler(this.BtnBanks_Click);
             // 
-            // button1
+            // BtnCategories
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(35, 83);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(192, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Kategoriler";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnCategories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCategories.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnCategories.Location = new System.Drawing.Point(35, 83);
+            this.BtnCategories.Name = "BtnCategories";
+            this.BtnCategories.Size = new System.Drawing.Size(192, 39);
+            this.BtnCategories.TabIndex = 0;
+            this.BtnCategories.Text = "Kategoriler";
+            this.BtnCategories.UseVisualStyleBackColor = true;
+            this.BtnCategories.Click += new System.EventHandler(this.BtnCategories_Click);
             // 
             // panel1
             // 
@@ -205,9 +208,9 @@
             this.panel1.Controls.Add(this.BtnDashboard);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.BtnBillForm);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.BtnSpendings);
             this.panel1.Controls.Add(this.BtnBanks);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BtnCategories);
             this.panel1.Location = new System.Drawing.Point(0, 39);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(265, 529);
@@ -232,6 +235,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel3.Controls.Add(this.BtnFindProcess);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.CmbBank);
             this.panel3.Controls.Add(this.BtnListProcesses);
@@ -250,6 +254,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(900, 217);
             this.panel3.TabIndex = 10;
+            // 
+            // BtnFindProcess
+            // 
+            this.BtnFindProcess.Location = new System.Drawing.Point(504, 161);
+            this.BtnFindProcess.Name = "BtnFindProcess";
+            this.BtnFindProcess.Size = new System.Drawing.Size(263, 39);
+            this.BtnFindProcess.TabIndex = 24;
+            this.BtnFindProcess.Text = "İşlemi Bul";
+            this.BtnFindProcess.UseVisualStyleBackColor = true;
+            this.BtnFindProcess.Click += new System.EventHandler(this.BtnFindProcess_Click);
             // 
             // label7
             // 
@@ -270,9 +284,9 @@
             // 
             // BtnListProcesses
             // 
-            this.BtnListProcesses.Location = new System.Drawing.Point(602, 175);
+            this.BtnListProcesses.Location = new System.Drawing.Point(504, 116);
             this.BtnListProcesses.Name = "BtnListProcesses";
-            this.BtnListProcesses.Size = new System.Drawing.Size(165, 39);
+            this.BtnListProcesses.Size = new System.Drawing.Size(263, 39);
             this.BtnListProcesses.TabIndex = 21;
             this.BtnListProcesses.Text = "İşlemleri Listele";
             this.BtnListProcesses.UseVisualStyleBackColor = true;
@@ -280,11 +294,11 @@
             // 
             // BtnAddProcess
             // 
-            this.BtnAddProcess.Location = new System.Drawing.Point(602, 132);
+            this.BtnAddProcess.Location = new System.Drawing.Point(504, 73);
             this.BtnAddProcess.Name = "BtnAddProcess";
-            this.BtnAddProcess.Size = new System.Drawing.Size(165, 39);
+            this.BtnAddProcess.Size = new System.Drawing.Size(263, 39);
             this.BtnAddProcess.TabIndex = 20;
-            this.BtnAddProcess.Text = "İşlem Ekle";
+            this.BtnAddProcess.Text = "İşlemi Kaydet";
             this.BtnAddProcess.UseVisualStyleBackColor = true;
             this.BtnAddProcess.Click += new System.EventHandler(this.BtnAddProcess_Click);
             // 
@@ -292,7 +306,7 @@
             // 
             this.RchDescription.Location = new System.Drawing.Point(504, 16);
             this.RchDescription.Name = "RchDescription";
-            this.RchDescription.Size = new System.Drawing.Size(263, 112);
+            this.RchDescription.Size = new System.Drawing.Size(263, 48);
             this.RchDescription.TabIndex = 19;
             this.RchDescription.Text = "";
             // 
@@ -416,9 +430,9 @@
         private System.Windows.Forms.Button BtnDashboard;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button BtnBillForm;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BtnSpendings;
         private System.Windows.Forms.Button BtnBanks;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnCategories;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox TxtBankProcessId;
         private System.Windows.Forms.Label label2;
@@ -437,5 +451,6 @@
         private System.Windows.Forms.ComboBox CmbBank;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button BtnFindProcess;
     }
 }
