@@ -209,6 +209,13 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\bank.ico" />
+    <None Include="Resources\isbank.png" />
+    <None Include="Resources\vakıfbank1.png" />
+    <None Include="Resources\vakıfbank.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\ziraatt1.png" />
+    <None Include="Resources\ziraatt.png" />
+    <None Include="Resources\ziraat.png" />
     <None Include="Resources\bankkart_debit_cipli_visa%402x.png" />
     <None Include="Resources\user create1.png" />
     <None Include="Resources\padlock create.png" />

@@ -19,13 +19,16 @@ namespace FinancialCrm
         }
         FinancialCrmDbEntities db = new FinancialCrmDbEntities();
         int count = 0;
+        public string username;
         private void FrmDashboard_Load(object sender, EventArgs e)
         {
+            //Toplam Bakiye
             var totalBalance = db.Banks.Sum(x => x.BankBalance);
             LblTotalBalance.Text = totalBalance.ToString() + " ₺";
 
+            //Gelen Son Havale
             var lastProcessAmount = db.BankProcesses.OrderByDescending(x => x.BankProcessId).Take(1).Select(y => y.Amount).FirstOrDefault();
-            LblLastBankProcessAmount.Text = lastProcessAmount.ToString();
+            LblLastBankProcessAmount.Text = lastProcessAmount.ToString() + " ₺";
 
             //chart 1
             var bankData = db.Banks.Select(x => new
@@ -54,12 +57,6 @@ namespace FinancialCrm
                 series2.Points.AddXY(item.BillTitle, item.BillAmount);
             }
         }
-
-        private void PbClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void PbMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -100,7 +97,6 @@ namespace FinancialCrm
             }
 
         }
-
         private void BtnBank_Click(object sender, EventArgs e)
         {
             FrmBanks frm = new FrmBanks();
@@ -118,6 +114,7 @@ namespace FinancialCrm
         private void BtnSettings_Click(object sender, EventArgs e)
         {
             FrmSettings frm = new FrmSettings();
+            frm.username = username;
             frm.Show();
             this.Hide();
         }

@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PbClose = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PbMinimize = new System.Windows.Forms.PictureBox();
             this.BtnLogout = new System.Windows.Forms.Button();
             this.BtnSettings = new System.Windows.Forms.Button();
-            this.FrmDashboard = new System.Windows.Forms.Button();
+            this.BtnDashboard = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.BtnBillForm = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -58,7 +57,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).BeginInit();
             this.panel1.SuspendLayout();
@@ -66,17 +64,6 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PbClose
-            // 
-            this.PbClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PbClose.Image = global::FinancialCrm.Properties.Resources.icons8_close_window_96;
-            this.PbClose.Location = new System.Drawing.Point(1115, 0);
-            this.PbClose.Name = "PbClose";
-            this.PbClose.Size = new System.Drawing.Size(57, 43);
-            this.PbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbClose.TabIndex = 10;
-            this.PbClose.TabStop = false;
             // 
             // label1
             // 
@@ -94,7 +81,6 @@
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.panel2.Controls.Add(this.PbMinimize);
-            this.panel2.Controls.Add(this.PbClose);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -106,12 +92,13 @@
             // 
             this.PbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PbMinimize.Image = global::FinancialCrm.Properties.Resources.icons8_minimize_50;
-            this.PbMinimize.Location = new System.Drawing.Point(1052, 0);
+            this.PbMinimize.Location = new System.Drawing.Point(1111, 3);
             this.PbMinimize.Name = "PbMinimize";
             this.PbMinimize.Size = new System.Drawing.Size(57, 43);
             this.PbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbMinimize.TabIndex = 11;
             this.PbMinimize.TabStop = false;
+            this.PbMinimize.Click += new System.EventHandler(this.PbMinimize_Click);
             // 
             // BtnLogout
             // 
@@ -137,17 +124,17 @@
             this.BtnSettings.UseVisualStyleBackColor = true;
             this.BtnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
             // 
-            // FrmDashboard
+            // BtnDashboard
             // 
-            this.FrmDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FrmDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.FrmDashboard.Location = new System.Drawing.Point(35, 308);
-            this.FrmDashboard.Name = "FrmDashboard";
-            this.FrmDashboard.Size = new System.Drawing.Size(192, 39);
-            this.FrmDashboard.TabIndex = 5;
-            this.FrmDashboard.Text = "Dashboard";
-            this.FrmDashboard.UseVisualStyleBackColor = true;
-            this.FrmDashboard.Click += new System.EventHandler(this.FrmDashboard_Click);
+            this.BtnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnDashboard.Location = new System.Drawing.Point(35, 308);
+            this.BtnDashboard.Name = "BtnDashboard";
+            this.BtnDashboard.Size = new System.Drawing.Size(192, 39);
+            this.BtnDashboard.TabIndex = 5;
+            this.BtnDashboard.Text = "Dashboard";
+            this.BtnDashboard.UseVisualStyleBackColor = true;
+            this.BtnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             // 
             // button5
             // 
@@ -214,7 +201,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(90)))), ((int)(((byte)(232)))));
             this.panel1.Controls.Add(this.BtnLogout);
             this.panel1.Controls.Add(this.BtnSettings);
-            this.panel1.Controls.Add(this.FrmDashboard);
+            this.panel1.Controls.Add(this.BtnDashboard);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.BtnBillForm);
             this.panel1.Controls.Add(this.button3);
@@ -356,7 +343,7 @@
             this.DtpProcessDate.Name = "DtpProcessDate";
             this.DtpProcessDate.Size = new System.Drawing.Size(181, 30);
             this.DtpProcessDate.TabIndex = 12;
-            this.DtpProcessDate.Value = new System.DateTime(2025, 1, 23, 0, 0, 0, 0);
+            this.DtpProcessDate.Value = new System.DateTime(2025, 1, 14, 0, 0, 0, 0);
             // 
             // label3
             // 
@@ -406,7 +393,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBankProcesses";
             this.Load += new System.EventHandler(this.FrmBankProcesses_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).EndInit();
@@ -420,14 +406,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox PbClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox PbMinimize;
         private System.Windows.Forms.Button BtnLogout;
         private System.Windows.Forms.Button BtnSettings;
-        private System.Windows.Forms.Button FrmDashboard;
+        private System.Windows.Forms.Button BtnDashboard;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button BtnBillForm;
         private System.Windows.Forms.Button button3;

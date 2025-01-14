@@ -18,6 +18,7 @@ namespace FinancialCrm
             InitializeComponent();
         }
         FinancialCrmDbEntities db = new FinancialCrmDbEntities();
+        public string username;
         void GetProcesses()
         {
             var processes = db.ListBankProcess().ToList();
@@ -40,16 +41,24 @@ namespace FinancialCrm
         }
         private void BtnAddProcess_Click(object sender, EventArgs e)
         {
-            BankProcesses bp = new BankProcesses();
-            bp.Description = RchDescription.Text;
-            bp.Amount = decimal.Parse(TxtAmount.Text);
-            bp.ProcessDate = DateTime.Parse(DtpProcessDate.Text);
-            bp.ProcessType = TxtProcessType.Text;
-            bp.BankId = int.Parse(CmbBank.SelectedValue.ToString());
-            db.BankProcesses.Add(bp);
-            db.SaveChanges();
-            MessageBox.Show("İşleminiz Başarıyla Kaydedilmiştir.","Bilgi",MessageBoxButtons.OK, MessageBoxIcon.Information);
-            GetProcesses();
+            try
+            {
+                BankProcesses bp = new BankProcesses();
+                bp.Description = RchDescription.Text;
+                bp.Amount = decimal.Parse(TxtAmount.Text);
+                bp.ProcessDate = DateTime.Parse(DtpProcessDate.Text);
+                bp.ProcessType = TxtProcessType.Text;
+                bp.BankId = int.Parse(CmbBank.SelectedValue.ToString());
+                db.BankProcesses.Add(bp);
+                db.SaveChanges();
+                MessageBox.Show("İşleminiz Başarıyla Kaydedilmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                GetProcesses();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Alanlar boş geçilemez.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
 
         }
 
@@ -66,21 +75,19 @@ namespace FinancialCrm
             frm.Show();
             this.Hide();
         }
-
-        private void FrmDashboard_Click(object sender, EventArgs e)
+        private void BtnDashboard_Click(object sender, EventArgs e)
         {
             FrmDashboard frm = new FrmDashboard();
             frm.Show();
             this.Hide();
         }
-
         private void BtnSettings_Click(object sender, EventArgs e)
         {
             FrmSettings frm = new FrmSettings();
+            frm.username = username;
             frm.Show();
             this.Hide();
         }
-
         private void BtnLogout_Click(object sender, EventArgs e)
         {
             DialogResult dialog = MessageBox.Show("Çıkış Yapmak İstediğinizden Emin Misiniz?", "Çıkış Yap", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -90,6 +97,10 @@ namespace FinancialCrm
                 FrmLogin frm = new FrmLogin();
                 frm.Show();
             }
+        }
+        private void PbMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
 
         

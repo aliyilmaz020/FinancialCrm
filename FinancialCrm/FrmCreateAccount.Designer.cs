@@ -31,18 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCreateAccount));
             this.panel2 = new System.Windows.Forms.Panel();
             this.PbMinimize = new System.Windows.Forms.PictureBox();
-            this.PbClose = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnCreateAccount = new System.Windows.Forms.Button();
             this.TxtPassword = new System.Windows.Forms.TextBox();
             this.TxtUserName = new System.Windows.Forms.TextBox();
+            this.PbClose = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -62,25 +62,13 @@
             // 
             this.PbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PbMinimize.Image = global::FinancialCrm.Properties.Resources.icons8_minimize_50;
-            this.PbMinimize.Location = new System.Drawing.Point(536, 3);
+            this.PbMinimize.Location = new System.Drawing.Point(543, 3);
             this.PbMinimize.Name = "PbMinimize";
             this.PbMinimize.Size = new System.Drawing.Size(56, 40);
             this.PbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbMinimize.TabIndex = 4;
             this.PbMinimize.TabStop = false;
             this.PbMinimize.Click += new System.EventHandler(this.PbMinimize_Click);
-            // 
-            // PbClose
-            // 
-            this.PbClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PbClose.Image = global::FinancialCrm.Properties.Resources.icons8_close_window_96;
-            this.PbClose.Location = new System.Drawing.Point(599, 3);
-            this.PbClose.Name = "PbClose";
-            this.PbClose.Size = new System.Drawing.Size(56, 40);
-            this.PbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbClose.TabIndex = 1;
-            this.PbClose.TabStop = false;
-            this.PbClose.Click += new System.EventHandler(this.PbClose_Click);
             // 
             // label1
             // 
@@ -160,6 +148,18 @@
             this.TxtUserName.Enter += new System.EventHandler(this.TxtUserName_Enter);
             this.TxtUserName.Leave += new System.EventHandler(this.TxtUserName_Leave);
             // 
+            // PbClose
+            // 
+            this.PbClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PbClose.Image = global::FinancialCrm.Properties.Resources.icons8_close_window_96;
+            this.PbClose.Location = new System.Drawing.Point(606, 3);
+            this.PbClose.Name = "PbClose";
+            this.PbClose.Size = new System.Drawing.Size(56, 40);
+            this.PbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbClose.TabIndex = 1;
+            this.PbClose.TabStop = false;
+            this.PbClose.Click += new System.EventHandler(this.PbClose_Click);
+            // 
             // FrmCreateAccount
             // 
             this.AcceptButton = this.BtnCreateAccount;
@@ -188,9 +188,9 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,12 +200,12 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox PbMinimize;
-        private System.Windows.Forms.PictureBox PbClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnCreateAccount;
         private System.Windows.Forms.TextBox TxtPassword;
         private System.Windows.Forms.TextBox TxtUserName;
+        private System.Windows.Forms.PictureBox PbClose;
     }
 }

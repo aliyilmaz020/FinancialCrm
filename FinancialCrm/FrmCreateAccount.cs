@@ -44,7 +44,9 @@ namespace FinancialCrm
 
         private void PbClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            FrmLogin frm = new FrmLogin();
+            frm.Show();
         }
 
         private void PbMinimize_Click(object sender, EventArgs e)

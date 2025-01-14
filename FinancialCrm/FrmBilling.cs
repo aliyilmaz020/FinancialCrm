@@ -18,6 +18,7 @@ namespace FinancialCrm
             InitializeComponent();
         }
         FinancialCrmDbEntities db = new FinancialCrmDbEntities();
+        public string username;
         void GetBills()
         {
             var values = db.Bills.ToList();
@@ -33,36 +34,60 @@ namespace FinancialCrm
         }
         private void BtnCreateBill_Click(object sender, EventArgs e)
         {
-            Bills bills = new Bills();
-            bills.BillTitle = TxtBillTitle.Text;
-            bills.BillAmount = decimal.Parse(TxtBillAmount.Text);
-            bills.BillPeriod = TxtBillPeriod.Text;
-            db.Bills.Add(bills);
-            db.SaveChanges();
-            MessageBox.Show("Yeni Ödeme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            GetBills();
+            try
+            {
+                Bills bills = new Bills();
+                bills.BillTitle = TxtBillTitle.Text;
+                bills.BillAmount = decimal.Parse(TxtBillAmount.Text);
+                bills.BillPeriod = TxtBillPeriod.Text;
+                db.Bills.Add(bills);
+                db.SaveChanges();
+                MessageBox.Show("Yeni Ödeme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                GetBills();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Alanlar boş geçilemez.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
         private void BtnDeleteBill_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(TxtBillId.Text);
-            var removeValue = db.Bills.Find(id);
-            db.Bills.Remove(removeValue);
-            db.SaveChanges();
-            MessageBox.Show("Ödeme Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            GetBills();
+            try
+            {
+                int id = int.Parse(TxtBillId.Text);
+                var removeValue = db.Bills.Find(id);
+                db.Bills.Remove(removeValue);
+                db.SaveChanges();
+                MessageBox.Show("Ödeme Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                GetBills();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Alanlar boş geçilemez.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
         private void BtnUpdateBill_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(TxtBillId.Text);
-            var updateValue = db.Bills.Find(id);
-            updateValue.BillTitle = TxtBillTitle.Text;
-            updateValue.BillAmount = decimal.Parse(TxtBillAmount.Text);
-            updateValue.BillPeriod = TxtBillPeriod.Text;
-            db.SaveChanges();
-            MessageBox.Show("Ödemeniz Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            GetBills();
+            try
+            {
+                int id = int.Parse(TxtBillId.Text);
+                var updateValue = db.Bills.Find(id);
+                updateValue.BillTitle = TxtBillTitle.Text;
+                updateValue.BillAmount = decimal.Parse(TxtBillAmount.Text);
+                updateValue.BillPeriod = TxtBillPeriod.Text;
+                db.SaveChanges();
+                MessageBox.Show("Ödemeniz Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                GetBills();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Alanlar boş geçilemez.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
         private void BtnBanks_Click(object sender, EventArgs e)
@@ -70,11 +95,6 @@ namespace FinancialCrm
             FrmBanks frm = new FrmBanks();
             frm.Show();
             this.Hide();
-        }
-
-        private void PbClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void PbMinimize_Click(object sender, EventArgs e)
@@ -103,6 +123,7 @@ namespace FinancialCrm
         private void BtnSettings_Click(object sender, EventArgs e)
         {
             FrmSettings frm = new FrmSettings();
+            frm.username = username;
             frm.Show();
             this.Hide();
         }

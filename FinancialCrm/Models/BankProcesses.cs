@@ -16,9 +16,9 @@ namespace FinancialCrm.Models
     {
         public int BankProcessId { get; set; }
         public string Description { get; set; }
-        public Nullable<System.DateTime> ProcessDate { get; set; }
+        public System.DateTime ProcessDate { get; set; }
         public string ProcessType { get; set; }
-        public Nullable<decimal> Amount { get; set; }
+        public decimal Amount { get; set; }
         public Nullable<int> BankId { get; set; }
     
         public virtual Banks Banks { get; set; }

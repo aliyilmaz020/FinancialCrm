@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.panel2 = new System.Windows.Forms.Panel();
             this.PbMinimize = new System.Windows.Forms.PictureBox();
             this.PbClose = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblBanner = new System.Windows.Forms.Label();
             this.TxtUserName = new System.Windows.Forms.TextBox();
             this.TxtPassword = new System.Windows.Forms.TextBox();
             this.BtnLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.LnkCreateAccount = new System.Windows.Forms.LinkLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbClose)).BeginInit();
@@ -52,7 +54,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.panel2.Controls.Add(this.PbMinimize);
             this.panel2.Controls.Add(this.PbClose);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.LblBanner);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -83,16 +85,16 @@
             this.PbClose.TabStop = false;
             this.PbClose.Click += new System.EventHandler(this.PbClose_Click);
             // 
-            // label1
+            // LblBanner
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(11, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Banka Kullanıcı Girişi";
+            this.LblBanner.AutoSize = true;
+            this.LblBanner.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblBanner.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LblBanner.Location = new System.Drawing.Point(11, 11);
+            this.LblBanner.Name = "LblBanner";
+            this.LblBanner.Size = new System.Drawing.Size(124, 25);
+            this.LblBanner.TabIndex = 3;
+            this.LblBanner.Text = "Hoşgeldiniz";
             // 
             // TxtUserName
             // 
@@ -178,6 +180,12 @@
             this.LnkCreateAccount.Text = "Yeni Hesap Oluştur";
             this.LnkCreateAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkCreateAccount_LinkClicked);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmLogin
             // 
             this.AcceptButton = this.BtnLogin;
@@ -221,12 +229,13 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox PbMinimize;
         private System.Windows.Forms.PictureBox PbClose;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblBanner;
         private System.Windows.Forms.Button BtnLogin;
         private System.Windows.Forms.TextBox TxtUserName;
         private System.Windows.Forms.TextBox TxtPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.LinkLabel LnkCreateAccount;
+        private System.Windows.Forms.Timer timer1;
     }
 }

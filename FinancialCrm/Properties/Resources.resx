@@ -121,31 +121,52 @@
   <data name="user create1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user create1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-close-window-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-close-window-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bankkart_debit_cipli_visa@2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bankkart_debit_cipli_visa@2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="geometric-gradient-futuristic-background_23-2149116406" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\geometric-gradient-futuristic-background_23-2149116406.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blue-digital-technology-background-with-white-building-logo-bank_666034-682" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blue-digital-technology-background-with-white-building-logo-bank_666034-682.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="padlock create" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\padlock create.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="padlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\padlock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ziraatt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ziraatt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-minimize-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-minimize-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user create" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user create.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ziraatt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ziraatt1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="padlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\padlock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="padlock create" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\padlock create.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bankkart_debit_cipli_visa@2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bankkart_debit_cipli_visa@2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user create" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user create.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="geometric-gradient-futuristic-background_23-2149116406" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\geometric-gradient-futuristic-background_23-2149116406.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ziraat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ziraat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-close-window-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-close-window-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vakıfbank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vakıfbank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue-digital-technology-background-with-white-building-logo-bank_666034-682" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue-digital-technology-background-with-white-building-logo-bank_666034-682.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vakıfbank1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vakıfbank1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="isbank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\isbank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

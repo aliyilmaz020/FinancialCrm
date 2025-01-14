@@ -22,14 +22,16 @@ namespace FinancialCrm
         private void FrmLogin_Load(object sender, EventArgs e)
         {
         }
+        int count = 0;
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            string user = TxtUserName.Text;
+            string username = TxtUserName.Text;
             string password = TxtPassword.Text;
-            var userControl = db.Users.Any(x => x.Username == user && x.Password == password);
+            var userControl = db.Users.Any(x => x.Username == username && x.Password == password);
             if (userControl)
             {
                 FrmBanks frm = new FrmBanks();
+                frm.username = username;
                 frm.Show();
                 this.Hide();
             }
@@ -69,7 +71,7 @@ namespace FinancialCrm
 
         private void TxtPassword_Enter(object sender, EventArgs e)
         {
-            if(TxtPassword.Text == "Şifre")
+            if (TxtPassword.Text == "Şifre")
             {
                 TxtPassword.UseSystemPasswordChar = true;
                 TxtPassword.Text = "";
@@ -92,6 +94,15 @@ namespace FinancialCrm
             FrmCreateAccount frm = new FrmCreateAccount();
             frm.Show();
             this.Hide();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            count++;
+            if (count == 5)
+            {
+                LblBanner.Text = "Banka Kullanıcı Girişi";
+            }
         }
     }
 }

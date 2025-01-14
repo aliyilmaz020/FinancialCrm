@@ -32,18 +32,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnLogout = new System.Windows.Forms.Button();
             this.BtnSettings = new System.Windows.Forms.Button();
-            this.FrmDashboard = new System.Windows.Forms.Button();
+            this.BtnDashboard = new System.Windows.Forms.Button();
             this.BtnBankProcesses = new System.Windows.Forms.Button();
             this.BtnBillForm = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.PbMinimize = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.LblVakifbankBalance = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.LblIsBankBalance = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -58,18 +61,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.LblBankProcess1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LblZiraatBalance = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.PbMinimize = new System.Windows.Forms.PictureBox();
-            this.PbClose = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,7 +81,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(90)))), ((int)(((byte)(232)))));
             this.panel1.Controls.Add(this.BtnLogout);
             this.panel1.Controls.Add(this.BtnSettings);
-            this.panel1.Controls.Add(this.FrmDashboard);
+            this.panel1.Controls.Add(this.BtnDashboard);
             this.panel1.Controls.Add(this.BtnBankProcesses);
             this.panel1.Controls.Add(this.BtnBillForm);
             this.panel1.Controls.Add(this.button3);
@@ -112,17 +116,17 @@
             this.BtnSettings.UseVisualStyleBackColor = true;
             this.BtnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
             // 
-            // FrmDashboard
+            // BtnDashboard
             // 
-            this.FrmDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FrmDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.FrmDashboard.Location = new System.Drawing.Point(35, 308);
-            this.FrmDashboard.Name = "FrmDashboard";
-            this.FrmDashboard.Size = new System.Drawing.Size(192, 39);
-            this.FrmDashboard.TabIndex = 5;
-            this.FrmDashboard.Text = "Dashboard";
-            this.FrmDashboard.UseVisualStyleBackColor = true;
-            this.FrmDashboard.Click += new System.EventHandler(this.FrmDashboard_Click);
+            this.BtnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnDashboard.Location = new System.Drawing.Point(35, 308);
+            this.BtnDashboard.Name = "BtnDashboard";
+            this.BtnDashboard.Size = new System.Drawing.Size(192, 39);
+            this.BtnDashboard.TabIndex = 5;
+            this.BtnDashboard.Text = "Dashboard";
+            this.BtnDashboard.UseVisualStyleBackColor = true;
+            this.BtnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             // 
             // BtnBankProcesses
             // 
@@ -188,13 +192,24 @@
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.panel2.Controls.Add(this.PbMinimize);
-            this.panel2.Controls.Add(this.PbClose);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1172, 46);
             this.panel2.TabIndex = 2;
+            // 
+            // PbMinimize
+            // 
+            this.PbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PbMinimize.Image = global::FinancialCrm.Properties.Resources.icons8_minimize_50;
+            this.PbMinimize.Location = new System.Drawing.Point(1108, 0);
+            this.PbMinimize.Name = "PbMinimize";
+            this.PbMinimize.Size = new System.Drawing.Size(57, 43);
+            this.PbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbMinimize.TabIndex = 11;
+            this.PbMinimize.TabStop = false;
+            this.PbMinimize.Click += new System.EventHandler(this.PbMinimize_Click);
             // 
             // label1
             // 
@@ -210,12 +225,24 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
+            this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.LblVakifbankBalance);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Location = new System.Drawing.Point(571, 52);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(294, 174);
             this.panel4.TabIndex = 4;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::FinancialCrm.Properties.Resources.vakıfbank1;
+            this.pictureBox2.Location = new System.Drawing.Point(23, 17);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(58, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
             // 
             // LblVakifbankBalance
             // 
@@ -233,7 +260,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(18, 17);
+            this.label5.Location = new System.Drawing.Point(87, 31);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 25);
             this.label5.TabIndex = 0;
@@ -242,12 +269,24 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
+            this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Controls.Add(this.LblIsBankBalance);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Location = new System.Drawing.Point(871, 52);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(294, 174);
             this.panel5.TabIndex = 4;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::FinancialCrm.Properties.Resources.isbank;
+            this.pictureBox3.Location = new System.Drawing.Point(23, 17);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(45, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
             // 
             // LblIsBankBalance
             // 
@@ -265,7 +304,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(18, 17);
+            this.label7.Location = new System.Drawing.Point(74, 31);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(112, 25);
             this.label7.TabIndex = 0;
@@ -389,12 +428,23 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(65)))), ((int)(((byte)(24)))));
+            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.LblZiraatBalance);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(271, 52);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(294, 174);
             this.panel3.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FinancialCrm.Properties.Resources.ziraatt1;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // LblZiraatBalance
             // 
@@ -412,35 +462,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(18, 17);
+            this.label2.Location = new System.Drawing.Point(71, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(150, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Ziraat Bankası";
-            // 
-            // PbMinimize
-            // 
-            this.PbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PbMinimize.Image = global::FinancialCrm.Properties.Resources.icons8_minimize_50;
-            this.PbMinimize.Location = new System.Drawing.Point(1052, 0);
-            this.PbMinimize.Name = "PbMinimize";
-            this.PbMinimize.Size = new System.Drawing.Size(57, 43);
-            this.PbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbMinimize.TabIndex = 11;
-            this.PbMinimize.TabStop = false;
-            this.PbMinimize.Click += new System.EventHandler(this.PbMinimize_Click);
-            // 
-            // PbClose
-            // 
-            this.PbClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PbClose.Image = global::FinancialCrm.Properties.Resources.icons8_close_window_96;
-            this.PbClose.Location = new System.Drawing.Point(1115, 0);
-            this.PbClose.Name = "PbClose";
-            this.PbClose.Size = new System.Drawing.Size(57, 43);
-            this.PbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbClose.TabIndex = 10;
-            this.PbClose.TabStop = false;
-            this.PbClose.Click += new System.EventHandler(this.PbClose_Click);
             // 
             // FrmBanks
             // 
@@ -465,16 +491,18 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -482,7 +510,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button FrmDashboard;
+        private System.Windows.Forms.Button BtnDashboard;
         private System.Windows.Forms.Button BtnBankProcesses;
         private System.Windows.Forms.Button BtnBillForm;
         private System.Windows.Forms.Button button3;
@@ -493,7 +521,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label LblZiraatBalance;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label LblVakifbankBalance;
         private System.Windows.Forms.Label label5;
@@ -511,8 +538,11 @@
         private System.Windows.Forms.Label LblBankProcess3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label LblBankProcess2;
-        private System.Windows.Forms.PictureBox PbClose;
         private System.Windows.Forms.PictureBox PbMinimize;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

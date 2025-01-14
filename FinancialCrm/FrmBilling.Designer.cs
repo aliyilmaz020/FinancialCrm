@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBilling));
             this.panel2 = new System.Windows.Forms.Panel();
             this.PbMinimize = new System.Windows.Forms.PictureBox();
-            this.PbClose = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnLogout = new System.Windows.Forms.Button();
@@ -59,7 +58,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -71,7 +69,6 @@
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.panel2.Controls.Add(this.PbMinimize);
-            this.panel2.Controls.Add(this.PbClose);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -83,25 +80,13 @@
             // 
             this.PbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PbMinimize.Image = global::FinancialCrm.Properties.Resources.icons8_minimize_50;
-            this.PbMinimize.Location = new System.Drawing.Point(1049, 0);
+            this.PbMinimize.Location = new System.Drawing.Point(1112, 3);
             this.PbMinimize.Name = "PbMinimize";
             this.PbMinimize.Size = new System.Drawing.Size(57, 43);
             this.PbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbMinimize.TabIndex = 4;
             this.PbMinimize.TabStop = false;
             this.PbMinimize.Click += new System.EventHandler(this.PbMinimize_Click);
-            // 
-            // PbClose
-            // 
-            this.PbClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PbClose.Image = global::FinancialCrm.Properties.Resources.icons8_close_window_96;
-            this.PbClose.Location = new System.Drawing.Point(1112, 0);
-            this.PbClose.Name = "PbClose";
-            this.PbClose.Size = new System.Drawing.Size(57, 43);
-            this.PbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbClose.TabIndex = 1;
-            this.PbClose.TabStop = false;
-            this.PbClose.Click += new System.EventHandler(this.PbClose_Click);
             // 
             // label1
             // 
@@ -406,7 +391,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -444,7 +428,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtBillId;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.PictureBox PbClose;
         private System.Windows.Forms.PictureBox PbMinimize;
     }
 }

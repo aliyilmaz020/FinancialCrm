@@ -53,7 +53,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PbMinimize = new System.Windows.Forms.PictureBox();
-            this.PbClose = new System.Windows.Forms.PictureBox();
             this.BtnLogout = new System.Windows.Forms.Button();
             this.BtnSettings = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -75,7 +74,6 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
@@ -240,7 +238,6 @@
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.panel2.Controls.Add(this.PbMinimize);
-            this.panel2.Controls.Add(this.PbClose);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -252,25 +249,13 @@
             // 
             this.PbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PbMinimize.Image = global::FinancialCrm.Properties.Resources.icons8_minimize_50;
-            this.PbMinimize.Location = new System.Drawing.Point(1041, 0);
+            this.PbMinimize.Location = new System.Drawing.Point(1109, 0);
             this.PbMinimize.Name = "PbMinimize";
             this.PbMinimize.Size = new System.Drawing.Size(57, 43);
             this.PbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbMinimize.TabIndex = 11;
             this.PbMinimize.TabStop = false;
             this.PbMinimize.Click += new System.EventHandler(this.PbMinimize_Click);
-            // 
-            // PbClose
-            // 
-            this.PbClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PbClose.Image = global::FinancialCrm.Properties.Resources.icons8_close_window_96;
-            this.PbClose.Location = new System.Drawing.Point(1104, 0);
-            this.PbClose.Name = "PbClose";
-            this.PbClose.Size = new System.Drawing.Size(57, 43);
-            this.PbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbClose.TabIndex = 10;
-            this.PbClose.TabStop = false;
-            this.PbClose.Click += new System.EventHandler(this.PbClose_Click);
             // 
             // BtnLogout
             // 
@@ -501,7 +486,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
@@ -530,7 +514,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox PbMinimize;
-        private System.Windows.Forms.PictureBox PbClose;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button BtnLogout;
