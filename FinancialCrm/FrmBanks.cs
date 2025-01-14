@@ -1,5 +1,6 @@
 ﻿using FinancialCrm.Models;
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -21,20 +22,50 @@ namespace FinancialCrm
             LblIsBankBalance.Text = db.Banks.Where(x => x.BankTitle == "İş Bankası").Select(y => y.BankBalance).FirstOrDefault().ToString() + " ₺";
 
             //Banka Hareketleri
-            var bankProcess1 = db.BankProcesses.OrderByDescending(x => x.BankProcessId).Take(1).FirstOrDefault();
-            LblBankProcess1.Text = bankProcess1.Description + " " + bankProcess1.Amount + " ₺" + " " + bankProcess1.ProcessDate;
+            var bankProcesses = db.BankProcesses.OrderByDescending(x => x.BankProcessId).Take(7).ToList(); // En son 7 işlemi alıyoruz
 
-            var bankProcess2 = db.BankProcesses.OrderByDescending(x => x.BankProcessId).Take(2).Skip(1).FirstOrDefault();
-            LblBankProcess2.Text = bankProcess2.Description + " " + bankProcess2.Amount + " ₺" + " " + bankProcess2.ProcessDate;
+            GroupBox targetGroupBox = this.Controls.Find("groupBox1", true).FirstOrDefault() as GroupBox; // Hedef GroupBox (GroupBox'ınızın adını yazın)
+            Panel panel = new Panel
+            {
+                Location = targetGroupBox.Location, // GroupBox'ın konumuna yerleştir
+                Size = targetGroupBox.Size,         // Aynı boyut
+                AutoScroll = true                   // Kaydırma çubuğunu etkinleştir
+            };
 
-            var bankProcess3 = db.BankProcesses.OrderByDescending(x => x.BankProcessId).Take(3).Skip(2).FirstOrDefault();
-            LblBankProcess3.Text = bankProcess3.Description + " " + bankProcess3.Amount + " ₺" + " " + bankProcess3.ProcessDate;
+            // Mevcut GroupBox'ı Panel'e ekle
+            this.Controls.Remove(targetGroupBox);
+            panel.Controls.Add(targetGroupBox);
+            this.Controls.Add(panel);
 
-            var bankProcess4 = db.BankProcesses.OrderByDescending(x => x.BankProcessId).Take(4).Skip(3).FirstOrDefault();
-            LblBankProcess4.Text = bankProcess4.Description + " " + bankProcess4.Amount + " ₺" + " " + bankProcess4.ProcessDate;
+            // GroupBox'ı Panel içine yerleştir
+            targetGroupBox.Location = new Point(0, 0);
+            if (targetGroupBox != null)
+            {
+                // Mevcut kontrolleri temizle (isteğe bağlı)
+                targetGroupBox.Controls.Clear();
 
-            var bankProcess5 = db.BankProcesses.OrderByDescending(x => x.BankProcessId).Take(5).Skip(4).FirstOrDefault();
-            LblBankProcess5.Text = bankProcess5.Description + " " + bankProcess5.Amount + " ₺" + " " + bankProcess5.ProcessDate;
+                int yPosition = 36; // İlk Label'ın Y pozisyonu
+                foreach (var bankProcess in bankProcesses)
+                {
+                    Label dynamicLabel = new Label
+                    {
+                        Text = $"{bankProcess.Description} {bankProcess.Amount} ₺ {bankProcess.ProcessDate}\n" +
+                               $"-----------------------------------------------------------------------------------------------------------------------------",
+                        Location = new Point(6, yPosition),
+                        AutoSize = false,
+                    };
+
+                    // Metnin boyutunu ölç ve yüksekliği ayarla
+                    var textSize = TextRenderer.MeasureText(dynamicLabel.Text, dynamicLabel.Font);
+                    dynamicLabel.Size = new Size(targetGroupBox.Width - 12, textSize.Height + 10);
+
+                    // Label'ı GroupBox'a ekle
+                    targetGroupBox.Controls.Add(dynamicLabel);
+
+                    // Bir sonraki Label için Y pozisyonunu ayarla
+                    yPosition += dynamicLabel.Height + 10; // Aralarına boşluk ekleyin
+                }
+            }
         }
 
         private void BtnBillForm_Click(object sender, EventArgs e)
@@ -83,6 +114,11 @@ namespace FinancialCrm
             frm.username = username;
             frm.Show();
             this.Hide();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
