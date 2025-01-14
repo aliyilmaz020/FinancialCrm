@@ -138,7 +138,6 @@
             this.BtnLogin.Size = new System.Drawing.Size(209, 41);
             this.BtnLogin.TabIndex = 9;
             this.BtnLogin.Text = "Giriş Yap";
-            this.BtnLogin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnLogin.UseVisualStyleBackColor = false;
             this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
@@ -172,7 +171,7 @@
             this.LnkCreateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LnkCreateAccount.ForeColor = System.Drawing.Color.MediumVioletRed;
             this.LnkCreateAccount.LinkColor = System.Drawing.Color.White;
-            this.LnkCreateAccount.Location = new System.Drawing.Point(472, 314);
+            this.LnkCreateAccount.Location = new System.Drawing.Point(433, 313);
             this.LnkCreateAccount.Name = "LnkCreateAccount";
             this.LnkCreateAccount.Size = new System.Drawing.Size(181, 25);
             this.LnkCreateAccount.TabIndex = 12;
@@ -189,8 +188,8 @@
             // FrmLogin
             // 
             this.AcceptButton = this.BtnLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::FinancialCrm.Properties.Resources.blue_digital_technology_background_with_white_building_logo_bank_666034_682;

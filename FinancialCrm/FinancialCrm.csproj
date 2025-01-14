@@ -209,6 +209,8 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\bank.ico" />
+    <None Include="Resources\password background1.jpg" />
+    <None Include="Resources\password background.jpg" />
     <None Include="Resources\isbank.png" />
     <None Include="Resources\vakıfbank1.png" />
     <None Include="Resources\vakıfbank.png" />

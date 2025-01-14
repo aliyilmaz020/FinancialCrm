@@ -31,18 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCreateAccount));
             this.panel2 = new System.Windows.Forms.Panel();
             this.PbMinimize = new System.Windows.Forms.PictureBox();
+            this.PbClose = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnCreateAccount = new System.Windows.Forms.Button();
             this.TxtPassword = new System.Windows.Forms.TextBox();
             this.TxtUserName = new System.Windows.Forms.TextBox();
-            this.PbClose = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -55,20 +55,32 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(664, 46);
+            this.panel2.Size = new System.Drawing.Size(730, 46);
             this.panel2.TabIndex = 13;
             // 
             // PbMinimize
             // 
             this.PbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PbMinimize.Image = global::FinancialCrm.Properties.Resources.icons8_minimize_50;
-            this.PbMinimize.Location = new System.Drawing.Point(543, 3);
+            this.PbMinimize.Location = new System.Drawing.Point(608, 3);
             this.PbMinimize.Name = "PbMinimize";
             this.PbMinimize.Size = new System.Drawing.Size(56, 40);
             this.PbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbMinimize.TabIndex = 4;
             this.PbMinimize.TabStop = false;
             this.PbMinimize.Click += new System.EventHandler(this.PbMinimize_Click);
+            // 
+            // PbClose
+            // 
+            this.PbClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PbClose.Image = global::FinancialCrm.Properties.Resources.icons8_close_window_96;
+            this.PbClose.Location = new System.Drawing.Point(671, 3);
+            this.PbClose.Name = "PbClose";
+            this.PbClose.Size = new System.Drawing.Size(56, 40);
+            this.PbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbClose.TabIndex = 1;
+            this.PbClose.TabStop = false;
+            this.PbClose.Click += new System.EventHandler(this.PbClose_Click);
             // 
             // label1
             // 
@@ -85,7 +97,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.LightCyan;
             this.pictureBox2.Image = global::FinancialCrm.Properties.Resources.padlock_create;
-            this.pictureBox2.Location = new System.Drawing.Point(188, 176);
+            this.pictureBox2.Location = new System.Drawing.Point(242, 200);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(51, 38);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -96,7 +108,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.LightCyan;
             this.pictureBox1.Image = global::FinancialCrm.Properties.Resources.user_create1;
-            this.pictureBox1.Location = new System.Drawing.Point(188, 121);
+            this.pictureBox1.Location = new System.Drawing.Point(242, 145);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(51, 38);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -112,7 +124,7 @@
             this.BtnCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnCreateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnCreateAccount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnCreateAccount.Location = new System.Drawing.Point(245, 231);
+            this.BtnCreateAccount.Location = new System.Drawing.Point(299, 255);
             this.BtnCreateAccount.Name = "BtnCreateAccount";
             this.BtnCreateAccount.Size = new System.Drawing.Size(209, 41);
             this.BtnCreateAccount.TabIndex = 16;
@@ -126,7 +138,7 @@
             this.TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtPassword.ForeColor = System.Drawing.Color.Gray;
-            this.TxtPassword.Location = new System.Drawing.Point(245, 176);
+            this.TxtPassword.Location = new System.Drawing.Point(299, 200);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(209, 38);
             this.TxtPassword.TabIndex = 15;
@@ -140,7 +152,7 @@
             this.TxtUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtUserName.ForeColor = System.Drawing.Color.Gray;
-            this.TxtUserName.Location = new System.Drawing.Point(245, 121);
+            this.TxtUserName.Location = new System.Drawing.Point(299, 145);
             this.TxtUserName.Name = "TxtUserName";
             this.TxtUserName.Size = new System.Drawing.Size(209, 38);
             this.TxtUserName.TabIndex = 14;
@@ -148,28 +160,16 @@
             this.TxtUserName.Enter += new System.EventHandler(this.TxtUserName_Enter);
             this.TxtUserName.Leave += new System.EventHandler(this.TxtUserName_Leave);
             // 
-            // PbClose
-            // 
-            this.PbClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PbClose.Image = global::FinancialCrm.Properties.Resources.icons8_close_window_96;
-            this.PbClose.Location = new System.Drawing.Point(606, 3);
-            this.PbClose.Name = "PbClose";
-            this.PbClose.Size = new System.Drawing.Size(56, 40);
-            this.PbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbClose.TabIndex = 1;
-            this.PbClose.TabStop = false;
-            this.PbClose.Click += new System.EventHandler(this.PbClose_Click);
-            // 
             // FrmCreateAccount
             // 
             this.AcceptButton = this.BtnCreateAccount;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::FinancialCrm.Properties.Resources.geometric_gradient_futuristic_background_23_2149116406;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(664, 339);
+            this.ClientSize = new System.Drawing.Size(730, 408);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -188,9 +188,9 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

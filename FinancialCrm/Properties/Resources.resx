@@ -121,6 +121,9 @@
   <data name="user create1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user create1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="isbank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\isbank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bankkart_debit_cipli_visa@2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bankkart_debit_cipli_visa@2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -138,6 +141,9 @@
   </data>
   <data name="padlock create" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\padlock create.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="password background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\password background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,7 +172,7 @@
   <data name="vakıfbank1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vakıfbank1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="isbank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\isbank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="password background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\password background1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

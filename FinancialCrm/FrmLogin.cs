@@ -27,7 +27,7 @@ namespace FinancialCrm
         {
             string username = TxtUserName.Text;
             string password = TxtPassword.Text;
-            var userControl = db.Users.Any(x => x.Username == username && x.Password == password);
+            bool userControl = db.Users.Any(x => x.Username == username && x.Password == password);
             if (userControl)
             {
                 FrmBanks frm = new FrmBanks();

@@ -58,13 +58,12 @@ namespace FinancialCrm
             {
                 MessageBox.Show("Alanlar boş geçilemez.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-
         }
 
         private void BtnBanks_Click(object sender, EventArgs e)
         {
             FrmBanks frm = new FrmBanks();
+            frm.username = username;
             frm.Show();
             this.Hide();
         }
@@ -72,12 +71,14 @@ namespace FinancialCrm
         private void BtnBillForm_Click(object sender, EventArgs e)
         {
             FrmBilling frm = new FrmBilling();
+            frm.username = username;
             frm.Show();
             this.Hide();
         }
         private void BtnDashboard_Click(object sender, EventArgs e)
         {
             FrmDashboard frm = new FrmDashboard();
+            frm.username = username;
             frm.Show();
             this.Hide();
         }

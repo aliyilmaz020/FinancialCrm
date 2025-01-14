@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSettings));
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PbMinimize = new System.Windows.Forms.PictureBox();
@@ -40,16 +41,16 @@
             this.BtnBanksForm = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.TxtPassword = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.TxtPassword2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.BtnChangePassword = new System.Windows.Forms.Button();
             this.LblUsername = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.BtnChangePassword = new System.Windows.Forms.Button();
+            this.TxtConfirmPassword = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -198,85 +199,91 @@
             this.panel1.Size = new System.Drawing.Size(265, 531);
             this.panel1.TabIndex = 6;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(369, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 25);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Kullanıcı Adı:";
-            // 
             // TxtPassword
             // 
-            this.TxtPassword.Location = new System.Drawing.Point(500, 153);
+            this.TxtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.TxtPassword.ForeColor = System.Drawing.Color.LightGray;
+            this.TxtPassword.Location = new System.Drawing.Point(837, 261);
             this.TxtPassword.Name = "TxtPassword";
-            this.TxtPassword.Size = new System.Drawing.Size(175, 30);
-            this.TxtPassword.TabIndex = 11;
-            this.TxtPassword.UseSystemPasswordChar = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(436, 158);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 25);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Şifre:";
-            // 
-            // TxtPassword2
-            // 
-            this.TxtPassword2.Location = new System.Drawing.Point(500, 189);
-            this.TxtPassword2.Name = "TxtPassword2";
-            this.TxtPassword2.Size = new System.Drawing.Size(175, 30);
-            this.TxtPassword2.TabIndex = 13;
-            this.TxtPassword2.UseSystemPasswordChar = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(374, 192);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 25);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Şifre Tekrar:";
-            // 
-            // BtnChangePassword
-            // 
-            this.BtnChangePassword.Location = new System.Drawing.Point(500, 226);
-            this.BtnChangePassword.Name = "BtnChangePassword";
-            this.BtnChangePassword.Size = new System.Drawing.Size(175, 33);
-            this.BtnChangePassword.TabIndex = 14;
-            this.BtnChangePassword.Text = "Şifreyi Değiştir";
-            this.BtnChangePassword.UseVisualStyleBackColor = true;
-            this.BtnChangePassword.Click += new System.EventHandler(this.BtnChangePassword_Click);
+            this.TxtPassword.Size = new System.Drawing.Size(246, 30);
+            this.TxtPassword.TabIndex = 18;
+            this.TxtPassword.Text = "Yeni Şifre";
+            this.TxtPassword.Enter += new System.EventHandler(this.TxtPassword_Enter);
+            this.TxtPassword.Leave += new System.EventHandler(this.TxtPassword_Leave);
             // 
             // LblUsername
             // 
             this.LblUsername.AutoSize = true;
-            this.LblUsername.Location = new System.Drawing.Point(500, 120);
+            this.LblUsername.BackColor = System.Drawing.Color.Transparent;
+            this.LblUsername.Location = new System.Drawing.Point(954, 217);
             this.LblUsername.Name = "LblUsername";
             this.LblUsername.Size = new System.Drawing.Size(45, 25);
-            this.LblUsername.TabIndex = 15;
+            this.LblUsername.TabIndex = 22;
             this.LblUsername.Text = "Null";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(832, 217);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(125, 25);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Kullanıcı Adı:";
+            // 
+            // BtnChangePassword
+            // 
+            this.BtnChangePassword.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.BtnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnChangePassword.Location = new System.Drawing.Point(837, 345);
+            this.BtnChangePassword.Name = "BtnChangePassword";
+            this.BtnChangePassword.Size = new System.Drawing.Size(246, 36);
+            this.BtnChangePassword.TabIndex = 21;
+            this.BtnChangePassword.Text = "Şifreyi Değiştir";
+            this.BtnChangePassword.UseVisualStyleBackColor = true;
+            this.BtnChangePassword.Click += new System.EventHandler(this.BtnChangePassword_Click);
+            // 
+            // TxtConfirmPassword
+            // 
+            this.TxtConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.TxtConfirmPassword.ForeColor = System.Drawing.Color.LightGray;
+            this.TxtConfirmPassword.Location = new System.Drawing.Point(837, 300);
+            this.TxtConfirmPassword.Name = "TxtConfirmPassword";
+            this.TxtConfirmPassword.Size = new System.Drawing.Size(246, 30);
+            this.TxtConfirmPassword.TabIndex = 20;
+            this.TxtConfirmPassword.Text = "Yeni Şifreyi Onayla";
+            this.TxtConfirmPassword.Enter += new System.EventHandler(this.TxtConfirmPassword_Enter);
+            this.TxtConfirmPassword.Leave += new System.EventHandler(this.TxtConfirmPassword_Leave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FinancialCrm.Properties.Resources.password_background1;
+            this.pictureBox1.Location = new System.Drawing.Point(316, 120);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(421, 354);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmSettings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(1172, 568);
-            this.Controls.Add(this.LblUsername);
-            this.Controls.Add(this.BtnChangePassword);
-            this.Controls.Add(this.TxtPassword2);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TxtPassword);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.LblUsername);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.BtnChangePassword);
+            this.Controls.Add(this.TxtConfirmPassword);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "FrmSettings";
@@ -287,6 +294,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,12 +313,11 @@
         private System.Windows.Forms.Button BtnBanksForm;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtPassword;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TxtPassword2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button BtnChangePassword;
         private System.Windows.Forms.Label LblUsername;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button BtnChangePassword;
+        private System.Windows.Forms.TextBox TxtConfirmPassword;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -23,6 +23,21 @@ namespace FinancialCrm
         {
             LblUsername.Text = username;
         }
+        private void BtnChangePassword_Click(object sender, EventArgs e)
+        {
+            var user = db.Users.Where(x => x.Username == username).FirstOrDefault();
+
+            if (TxtPassword.Text == TxtConfirmPassword.Text)
+            {
+                user.Password = TxtConfirmPassword.Text;
+                db.SaveChanges();
+                MessageBox.Show("Şifreniz başarıyla değiştirildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Girilen şifreler eşleşmiyor.\nTekrar deneyiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
         private void PbMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -70,19 +85,45 @@ namespace FinancialCrm
             this.Hide();
         }
 
-        private void BtnChangePassword_Click(object sender, EventArgs e)
+        private void TxtPassword_Enter(object sender, EventArgs e)
         {
-            var user = db.Users.Where(x => x.Username == username).FirstOrDefault();
-            if (TxtPassword.Text == TxtPassword2.Text)
+            if (TxtPassword.Text == "Yeni Şifre")
             {
-                user.Password = TxtPassword2.Text;
-                db.SaveChanges();
-                MessageBox.Show("Şifreniz başarıyla değiştirildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Girilen şifreler eşleşmiyor.\nTekrar deneyiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                TxtPassword.Text = "";
+                TxtPassword.UseSystemPasswordChar = true;
+                TxtPassword.ForeColor = Color.Black;
             }
         }
+
+        private void TxtPassword_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TxtPassword.Text))
+            {
+                TxtPassword.UseSystemPasswordChar = false;
+                TxtPassword.Text = "Yeni Şifre";
+                TxtPassword.ForeColor = Color.Gray;
+            }
+        }
+        private void TxtConfirmPassword_Enter(object sender, EventArgs e)
+        {
+            if (TxtConfirmPassword.Text == "Yeni Şifreyi Onayla")
+            {
+                TxtConfirmPassword.Text = "";
+                TxtConfirmPassword.UseSystemPasswordChar = true;
+                TxtConfirmPassword.ForeColor = Color.Black;
+            }
+        }
+
+        private void TxtConfirmPassword_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TxtConfirmPassword.Text))
+            {
+                TxtConfirmPassword.UseSystemPasswordChar = false;
+                TxtPassword.ForeColor = Color.Gray;
+                TxtConfirmPassword.Text = "Yeni Şifreyi Onayla";
+            }
+        }
+
+
     }
 }

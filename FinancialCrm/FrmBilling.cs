@@ -93,6 +93,7 @@ namespace FinancialCrm
         private void BtnBanks_Click(object sender, EventArgs e)
         {
             FrmBanks frm = new FrmBanks();
+            frm.username = username;
             frm.Show();
             this.Hide();
         }
@@ -105,6 +106,7 @@ namespace FinancialCrm
         private void BtnDashboard_Click(object sender, EventArgs e)
         {
             FrmDashboard frm = new FrmDashboard();
+            frm.username = username;
             frm.Show();
             this.Hide();
         }
@@ -131,6 +133,7 @@ namespace FinancialCrm
         private void BtnBankProcesses_Click(object sender, EventArgs e)
         {
             FrmBankProcesses frm = new FrmBankProcesses();
+            frm.username = username;
             frm.Show();
             this.Hide();
         }

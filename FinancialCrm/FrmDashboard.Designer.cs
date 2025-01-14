@@ -129,11 +129,11 @@
             // LblLastBankProcessAmount
             // 
             this.LblLastBankProcessAmount.AutoSize = true;
-            this.LblLastBankProcessAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblLastBankProcessAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LblLastBankProcessAmount.ForeColor = System.Drawing.Color.White;
-            this.LblLastBankProcessAmount.Location = new System.Drawing.Point(11, 70);
+            this.LblLastBankProcessAmount.Location = new System.Drawing.Point(14, 82);
             this.LblLastBankProcessAmount.Name = "LblLastBankProcessAmount";
-            this.LblLastBankProcessAmount.Size = new System.Drawing.Size(201, 69);
+            this.LblLastBankProcessAmount.Size = new System.Drawing.Size(158, 54);
             this.LblLastBankProcessAmount.TabIndex = 1;
             this.LblLastBankProcessAmount.Text = "0.00 ₺";
             // 
@@ -142,7 +142,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(18, 17);
+            this.label7.Location = new System.Drawing.Point(18, 34);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(187, 25);
             this.label7.TabIndex = 0;
@@ -150,6 +150,7 @@
             // 
             // panel5
             // 
+            this.panel5.AutoScroll = true;
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(232)))), ((int)(((byte)(129)))));
             this.panel5.Controls.Add(this.LblLastBankProcessAmount);
             this.panel5.Controls.Add(this.label7);
@@ -161,11 +162,11 @@
             // LblBillAmount
             // 
             this.LblBillAmount.AutoSize = true;
-            this.LblBillAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblBillAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LblBillAmount.ForeColor = System.Drawing.Color.White;
-            this.LblBillAmount.Location = new System.Drawing.Point(11, 70);
+            this.LblBillAmount.Location = new System.Drawing.Point(14, 82);
             this.LblBillAmount.Name = "LblBillAmount";
-            this.LblBillAmount.Size = new System.Drawing.Size(201, 69);
+            this.LblBillAmount.Size = new System.Drawing.Size(158, 54);
             this.LblBillAmount.TabIndex = 1;
             this.LblBillAmount.Text = "0.00 ₺";
             // 
@@ -174,7 +175,7 @@
             this.LblBillTitle.AutoSize = true;
             this.LblBillTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LblBillTitle.ForeColor = System.Drawing.Color.White;
-            this.LblBillTitle.Location = new System.Drawing.Point(18, 17);
+            this.LblBillTitle.Location = new System.Drawing.Point(18, 34);
             this.LblBillTitle.Name = "LblBillTitle";
             this.LblBillTitle.Size = new System.Drawing.Size(144, 25);
             this.LblBillTitle.TabIndex = 0;
@@ -182,6 +183,7 @@
             // 
             // panel4
             // 
+            this.panel4.AutoScroll = true;
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(172)))), ((int)(((byte)(224)))));
             this.panel4.Controls.Add(this.LblBillAmount);
             this.panel4.Controls.Add(this.LblBillTitle);
@@ -193,11 +195,11 @@
             // LblTotalBalance
             // 
             this.LblTotalBalance.AutoSize = true;
-            this.LblTotalBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblTotalBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LblTotalBalance.ForeColor = System.Drawing.Color.White;
-            this.LblTotalBalance.Location = new System.Drawing.Point(-5, 70);
+            this.LblTotalBalance.Location = new System.Drawing.Point(13, 82);
             this.LblTotalBalance.Name = "LblTotalBalance";
-            this.LblTotalBalance.Size = new System.Drawing.Size(201, 69);
+            this.LblTotalBalance.Size = new System.Drawing.Size(158, 54);
             this.LblTotalBalance.TabIndex = 1;
             this.LblTotalBalance.Text = "0.00 ₺";
             // 
@@ -206,7 +208,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(18, 17);
+            this.label10.Location = new System.Drawing.Point(17, 34);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(172, 25);
             this.label10.TabIndex = 0;
@@ -214,6 +216,7 @@
             // 
             // panel3
             // 
+            this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.panel3.Controls.Add(this.LblTotalBalance);
             this.panel3.Controls.Add(this.label10);
@@ -450,8 +453,8 @@
             // 
             // FrmDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1169, 568);
             this.Controls.Add(this.panel7);
