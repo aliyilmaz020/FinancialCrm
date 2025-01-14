@@ -93,7 +93,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="ListBankProcess" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="FinancialCrmDbModelStoreContainer">
           <EntitySet Name="BankProcesses" EntityType="Self.BankProcesses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Banks" EntityType="Self.Banks" Schema="dbo" store:Type="Tables" />
@@ -223,16 +222,7 @@
             <End Role="Categories" EntitySet="Categories" />
             <End Role="Spendings" EntitySet="Spendings" />
           </AssociationSet>
-          <FunctionImport Name="ListBankProcess" ReturnType="Collection(FinancialCrmDbModel.ListBankProcess_Result)" />
         </EntityContainer>
-        <ComplexType Name="ListBankProcess_Result">
-          <Property Type="Int32" Name="BankProcessId" Nullable="false" />
-          <Property Type="String" Name="Description" Nullable="true" MaxLength="250" />
-          <Property Type="DateTime" Name="ProcessDate" Nullable="true" />
-          <Property Type="String" Name="ProcessType" Nullable="true" MaxLength="50" />
-          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="18" Scale="2" />
-          <Property Type="String" Name="BankTitle" Nullable="true" MaxLength="50" />
-        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -310,18 +300,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="ListBankProcess" FunctionName="FinancialCrmDbModel.Store.ListBankProcess">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="FinancialCrmDbModel.ListBankProcess_Result">
-                <ScalarProperty Name="BankProcessId" ColumnName="BankProcessId" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
-                <ScalarProperty Name="ProcessType" ColumnName="ProcessType" />
-                <ScalarProperty Name="Amount" ColumnName="Amount" />
-                <ScalarProperty Name="BankTitle" ColumnName="BankTitle" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

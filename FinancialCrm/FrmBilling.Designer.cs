@@ -240,9 +240,9 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.TxtBillId);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(266, 52);
+            this.panel3.Location = new System.Drawing.Point(265, 52);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(906, 205);
+            this.panel3.Size = new System.Drawing.Size(907, 205);
             this.panel3.TabIndex = 5;
             // 
             // BtnUpdateBill
