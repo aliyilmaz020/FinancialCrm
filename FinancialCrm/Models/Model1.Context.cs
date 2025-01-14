@@ -12,6 +12,8 @@ namespace FinancialCrm.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class FinancialCrmDbEntities : DbContext
     {
@@ -32,5 +34,10 @@ namespace FinancialCrm.Models
         public virtual DbSet<Spendings> Spendings { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Users> Users { get; set; }
+    
+        public virtual ObjectResult<ListBankProcess_Result> ListBankProcess()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListBankProcess_Result>("ListBankProcess");
+        }
     }
 }
