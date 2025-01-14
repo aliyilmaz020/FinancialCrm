@@ -53,7 +53,7 @@ namespace FinancialCrm
             DialogResult dialog = MessageBox.Show("Çıkış Yapmak İstediğinizden Emin Misiniz?", "Çıkış Yap", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
-                this.Close();
+                this.Hide();
                 FrmLogin frm = new FrmLogin();
                 frm.Show();
             }
