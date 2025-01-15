@@ -21,7 +21,7 @@ namespace FinancialCrm
         public string username;
         void GetProcesses()
         {
-            var processes = db.ListBankProcess().ToList();
+            var processes = db.GetProcess().ToList();
             dataGridView1.DataSource = processes;
         }
         void Clean()
@@ -114,24 +114,6 @@ namespace FinancialCrm
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void BtnFindProcess_Click(object sender, EventArgs e)
-        {
-            DateTime processDate = DateTime.Parse(DtpProcessDate.Text);
-            int bank = int.Parse(CmbBank.SelectedValue.ToString());
-            var findProcess = db.BankProcesses.Where(x => x.ProcessDate == processDate || x.BankId == bank).Join(db.Banks, y => y.BankId, z => z.BankId, (y, z) => new { y, z })
-                .Select(d1 => new
-                {
-                    d1.y.BankProcessId,
-                    d1.y.Description,
-                    d1.y.ProcessDate,
-                    d1.y.ProcessType,
-                    d1.y.Amount,
-                    d1.z.BankTitle
-                }).ToList();
-            dataGridView1.DataSource = findProcess;
-            Clean();
-        }
-
         private void BtnCategories_Click(object sender, EventArgs e)
         {
             FrmCategories frm = new FrmCategories();
@@ -146,6 +128,42 @@ namespace FinancialCrm
             frm.username = username;
             frm.Show();
             this.Hide();
+        }
+
+        private void TxtFind_Enter(object sender, EventArgs e)
+        {
+            if (TxtFind.Text == "Ara")
+            {
+                TxtFind.Text = "";
+                TxtFind.ForeColor = Color.Black;
+            }
+        }
+
+        private void TxtFind_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(TxtFind.Text))
+            {
+                TxtFind.ForeColor = Color.DimGray;
+                TxtFind.Text = "Ara";
+            }
+        }
+
+        private void TxtFind_TextChanged(object sender, EventArgs e)
+        {
+            string find = TxtFind.Text;
+            var values = db.BankProcesses.Join(db.Banks, d1 => d1.BankId, d2 => d2.BankId, (d1, d2) => new { d1, d2 }).
+                Where(x => x.d1.Amount.ToString().Contains(find) || x.d1.Description.Contains(find) || x.d2.BankTitle.Contains(find) ||
+                x.d1.ProcessType.Contains(find) || x.d1.ProcessDate.ToString().Contains(find)).Select(y => new
+                {
+                    İşlemID = y.d1.BankProcessId,
+                    Açıklama = y.d1.Description,
+                    İşlemTarihi = y.d1.ProcessDate,
+                    İşlemTürü = y.d1.ProcessType,
+                    Miktar = y.d1.Amount,
+                    Banka = y.d2.BankTitle
+                }).ToList();
+            dataGridView1.DataSource = values;
+
         }
     }
 }

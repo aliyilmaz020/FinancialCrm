@@ -178,7 +178,7 @@
             // 
             this.PbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PbMinimize.Image = global::FinancialCrm.Properties.Resources.icons8_minimize_50;
-            this.PbMinimize.Location = new System.Drawing.Point(833, 2);
+            this.PbMinimize.Location = new System.Drawing.Point(884, 3);
             this.PbMinimize.Name = "PbMinimize";
             this.PbMinimize.Size = new System.Drawing.Size(57, 43);
             this.PbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -195,7 +195,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(892, 46);
+            this.panel2.Size = new System.Drawing.Size(944, 46);
             this.panel2.TabIndex = 25;
             // 
             // label1
@@ -211,7 +211,8 @@
             // 
             // TxtCategoryName
             // 
-            this.TxtCategoryName.Location = new System.Drawing.Point(284, 57);
+            this.TxtCategoryName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(226)))));
+            this.TxtCategoryName.Location = new System.Drawing.Point(161, 103);
             this.TxtCategoryName.Name = "TxtCategoryName";
             this.TxtCategoryName.Size = new System.Drawing.Size(181, 30);
             this.TxtCategoryName.TabIndex = 29;
@@ -219,7 +220,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(153, 60);
+            this.label6.Location = new System.Drawing.Point(30, 106);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(125, 25);
             this.label6.TabIndex = 27;
@@ -228,7 +229,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(163, 21);
+            this.label5.Location = new System.Drawing.Point(40, 67);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 25);
             this.label5.TabIndex = 26;
@@ -236,24 +237,28 @@
             // 
             // TxtCategoryId
             // 
+            this.TxtCategoryId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(226)))));
             this.TxtCategoryId.Enabled = false;
-            this.TxtCategoryId.Location = new System.Drawing.Point(284, 18);
+            this.TxtCategoryId.Location = new System.Drawing.Point(161, 64);
             this.TxtCategoryId.Name = "TxtCategoryId";
             this.TxtCategoryId.Size = new System.Drawing.Size(181, 30);
             this.TxtCategoryId.TabIndex = 28;
             // 
             // BtnAddCategory
             // 
-            this.BtnAddCategory.Location = new System.Drawing.Point(316, 95);
+            this.BtnAddCategory.BackColor = System.Drawing.Color.Lavender;
+            this.BtnAddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAddCategory.Location = new System.Drawing.Point(518, 55);
             this.BtnAddCategory.Name = "BtnAddCategory";
             this.BtnAddCategory.Size = new System.Drawing.Size(149, 39);
             this.BtnAddCategory.TabIndex = 30;
             this.BtnAddCategory.Text = "Kaydet";
-            this.BtnAddCategory.UseVisualStyleBackColor = true;
+            this.BtnAddCategory.UseVisualStyleBackColor = false;
             this.BtnAddCategory.Click += new System.EventHandler(this.BtnAddCategory_Click);
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(217)))), ((int)(((byte)(178)))));
             this.panel3.Controls.Add(this.BtnDeleteCategory);
             this.panel3.Controls.Add(this.BtnListCategory);
             this.panel3.Controls.Add(this.BtnUpdateCategory);
@@ -264,37 +269,43 @@
             this.panel3.Controls.Add(this.TxtCategoryId);
             this.panel3.Location = new System.Drawing.Point(265, 46);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(627, 189);
+            this.panel3.Size = new System.Drawing.Size(679, 189);
             this.panel3.TabIndex = 31;
             // 
             // BtnDeleteCategory
             // 
-            this.BtnDeleteCategory.Location = new System.Drawing.Point(316, 140);
+            this.BtnDeleteCategory.BackColor = System.Drawing.Color.Lavender;
+            this.BtnDeleteCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDeleteCategory.Location = new System.Drawing.Point(518, 100);
             this.BtnDeleteCategory.Name = "BtnDeleteCategory";
             this.BtnDeleteCategory.Size = new System.Drawing.Size(149, 39);
             this.BtnDeleteCategory.TabIndex = 33;
             this.BtnDeleteCategory.Text = "Sil";
-            this.BtnDeleteCategory.UseVisualStyleBackColor = true;
+            this.BtnDeleteCategory.UseVisualStyleBackColor = false;
             this.BtnDeleteCategory.Click += new System.EventHandler(this.BtnDeleteCategory_Click);
             // 
             // BtnListCategory
             // 
-            this.BtnListCategory.Location = new System.Drawing.Point(158, 95);
+            this.BtnListCategory.BackColor = System.Drawing.Color.Lavender;
+            this.BtnListCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnListCategory.Location = new System.Drawing.Point(363, 55);
             this.BtnListCategory.Name = "BtnListCategory";
             this.BtnListCategory.Size = new System.Drawing.Size(149, 39);
             this.BtnListCategory.TabIndex = 32;
             this.BtnListCategory.Text = "Listele";
-            this.BtnListCategory.UseVisualStyleBackColor = true;
+            this.BtnListCategory.UseVisualStyleBackColor = false;
             this.BtnListCategory.Click += new System.EventHandler(this.BtnListCategory_Click);
             // 
             // BtnUpdateCategory
             // 
-            this.BtnUpdateCategory.Location = new System.Drawing.Point(158, 139);
+            this.BtnUpdateCategory.BackColor = System.Drawing.Color.Lavender;
+            this.BtnUpdateCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnUpdateCategory.Location = new System.Drawing.Point(363, 100);
             this.BtnUpdateCategory.Name = "BtnUpdateCategory";
             this.BtnUpdateCategory.Size = new System.Drawing.Size(149, 39);
             this.BtnUpdateCategory.TabIndex = 31;
             this.BtnUpdateCategory.Text = "Güncelle";
-            this.BtnUpdateCategory.UseVisualStyleBackColor = true;
+            this.BtnUpdateCategory.UseVisualStyleBackColor = false;
             this.BtnUpdateCategory.Click += new System.EventHandler(this.BtnUpdateCategory_Click);
             // 
             // panel4
@@ -302,7 +313,7 @@
             this.panel4.Controls.Add(this.dataGridView1);
             this.panel4.Location = new System.Drawing.Point(265, 241);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(627, 328);
+            this.panel4.Size = new System.Drawing.Size(679, 328);
             this.panel4.TabIndex = 34;
             // 
             // dataGridView1
@@ -314,7 +325,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(627, 328);
+            this.dataGridView1.Size = new System.Drawing.Size(679, 328);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -323,7 +334,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(892, 568);
+            this.ClientSize = new System.Drawing.Size(944, 568);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);

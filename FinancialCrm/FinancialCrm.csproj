@@ -125,6 +125,9 @@
     <Compile Include="Models\Categories.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\GetProcess_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ListBankProcess_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -227,6 +230,7 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\bank.ico" />
+    <None Include="Resources\icons8-search.gif" />
     <None Include="Resources\password background1.jpg" />
     <None Include="Resources\password background.jpg" />
     <None Include="Resources\isbank.png" />

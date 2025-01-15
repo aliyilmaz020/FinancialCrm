@@ -10,17 +10,14 @@
 namespace FinancialCrm.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class BankProcesses
+    public partial class GetProcess_Result
     {
-        public int BankProcessId { get; set; }
-        public string Description { get; set; }
-        public Nullable<System.DateTime> ProcessDate { get; set; }
-        public string ProcessType { get; set; }
-        public Nullable<decimal> Amount { get; set; }
-        public Nullable<int> BankId { get; set; }
-    
-        public virtual Banks Banks { get; set; }
+        public int İşlemID { get; set; }
+        public string Açıklama { get; set; }
+        public Nullable<System.DateTime> İşlemTarihi { get; set; }
+        public string İşlemTürü { get; set; }
+        public Nullable<decimal> Miktar { get; set; }
+        public string Banka { get; set; }
     }
 }

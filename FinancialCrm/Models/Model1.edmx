@@ -10,10 +10,10 @@
             <PropertyRef Name="BankProcessId" />
           </Key>
           <Property Name="BankProcessId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Description" Type="nvarchar" MaxLength="250" Nullable="false" />
-          <Property Name="ProcessDate" Type="date" Nullable="false" />
-          <Property Name="ProcessType" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" />
+          <Property Name="ProcessDate" Type="date" />
+          <Property Name="ProcessType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
           <Property Name="BankId" Type="int" />
         </EntityType>
         <EntityType Name="Banks">
@@ -93,7 +93,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="ListBankProcess" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetProcess" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="FinancialCrmDbModelStoreContainer">
           <EntitySet Name="BankProcesses" EntityType="Self.BankProcesses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Banks" EntityType="Self.Banks" Schema="dbo" store:Type="Tables" />
@@ -120,10 +120,10 @@
             <PropertyRef Name="BankProcessId" />
           </Key>
           <Property Name="BankProcessId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ProcessDate" Type="DateTime" Precision="0" Nullable="false" />
-          <Property Name="ProcessType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ProcessDate" Type="DateTime" Precision="0" />
+          <Property Name="ProcessType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="BankId" Type="Int32" />
           <NavigationProperty Name="Banks" Relationship="Self.FK_BankProcesses_Banks" FromRole="BankProcesses" ToRole="Banks" />
         </EntityType>
@@ -224,6 +224,7 @@
             <End Role="Spendings" EntitySet="Spendings" />
           </AssociationSet>
           <FunctionImport Name="ListBankProcess" ReturnType="Collection(FinancialCrmDbModel.ListBankProcess_Result)" />
+          <FunctionImport Name="GetProcess" ReturnType="Collection(FinancialCrmDbModel.GetProcess_Result)" />
         </EntityContainer>
         <ComplexType Name="ListBankProcess_Result">
           <Property Type="Int32" Name="BankProcessId" Nullable="false" />
@@ -232,6 +233,14 @@
           <Property Type="String" Name="ProcessType" Nullable="true" MaxLength="50" />
           <Property Type="Decimal" Name="Amount" Nullable="true" Precision="18" Scale="2" />
           <Property Type="String" Name="BankTitle" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="GetProcess_Result">
+          <Property Type="Int32" Name="İşlemID" Nullable="false" />
+          <Property Type="String" Name="Açıklama" Nullable="true" MaxLength="250" />
+          <Property Type="DateTime" Name="İşlemTarihi" Nullable="true" />
+          <Property Type="String" Name="İşlemTürü" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="Miktar" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="Banka" Nullable="true" MaxLength="50" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -310,15 +319,15 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="ListBankProcess" FunctionName="FinancialCrmDbModel.Store.ListBankProcess">
+          <FunctionImportMapping FunctionImportName="GetProcess" FunctionName="FinancialCrmDbModel.Store.GetProcess">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="FinancialCrmDbModel.ListBankProcess_Result">
-                <ScalarProperty Name="BankProcessId" ColumnName="BankProcessId" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
-                <ScalarProperty Name="ProcessType" ColumnName="ProcessType" />
-                <ScalarProperty Name="Amount" ColumnName="Amount" />
-                <ScalarProperty Name="BankTitle" ColumnName="BankTitle" />
+              <ComplexTypeMapping TypeName="FinancialCrmDbModel.GetProcess_Result">
+                <ScalarProperty Name="İşlemID" ColumnName="İşlemID" />
+                <ScalarProperty Name="Açıklama" ColumnName="Açıklama" />
+                <ScalarProperty Name="İşlemTarihi" ColumnName="İşlemTarihi" />
+                <ScalarProperty Name="İşlemTürü" ColumnName="İşlemTürü" />
+                <ScalarProperty Name="Miktar" ColumnName="Miktar" />
+                <ScalarProperty Name="Banka" ColumnName="Banka" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

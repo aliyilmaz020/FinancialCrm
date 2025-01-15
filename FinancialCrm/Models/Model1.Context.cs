@@ -39,5 +39,10 @@ namespace FinancialCrm.Models
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListBankProcess_Result>("ListBankProcess");
         }
+    
+        public virtual ObjectResult<GetProcess_Result> GetProcess()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetProcess_Result>("GetProcess");
+        }
     }
 }

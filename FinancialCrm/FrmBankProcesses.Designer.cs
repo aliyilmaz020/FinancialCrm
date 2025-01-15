@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBankProcesses));
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.PbMinimize = new System.Windows.Forms.PictureBox();
             this.BtnLogout = new System.Windows.Forms.Button();
             this.BtnSettings = new System.Windows.Forms.Button();
             this.BtnDashboard = new System.Windows.Forms.Button();
@@ -44,7 +43,6 @@
             this.TxtBankProcessId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.BtnFindProcess = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.CmbBank = new System.Windows.Forms.ComboBox();
             this.BtnListProcesses = new System.Windows.Forms.Button();
@@ -59,12 +57,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.TxtFind = new System.Windows.Forms.TextBox();
+            this.PbMinimize = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -89,18 +89,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1172, 46);
             this.panel2.TabIndex = 7;
-            // 
-            // PbMinimize
-            // 
-            this.PbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PbMinimize.Image = global::FinancialCrm.Properties.Resources.icons8_minimize_50;
-            this.PbMinimize.Location = new System.Drawing.Point(1111, 3);
-            this.PbMinimize.Name = "PbMinimize";
-            this.PbMinimize.Size = new System.Drawing.Size(57, 43);
-            this.PbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbMinimize.TabIndex = 11;
-            this.PbMinimize.TabStop = false;
-            this.PbMinimize.Click += new System.EventHandler(this.PbMinimize_Click);
             // 
             // BtnLogout
             // 
@@ -218,6 +206,7 @@
             // 
             // TxtBankProcessId
             // 
+            this.TxtBankProcessId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(226)))));
             this.TxtBankProcessId.Location = new System.Drawing.Point(176, 16);
             this.TxtBankProcessId.Name = "TxtBankProcessId";
             this.TxtBankProcessId.Size = new System.Drawing.Size(181, 30);
@@ -235,7 +224,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel3.Controls.Add(this.BtnFindProcess);
+            this.panel3.Controls.Add(this.TxtFind);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.CmbBank);
             this.panel3.Controls.Add(this.BtnListProcesses);
@@ -255,16 +244,6 @@
             this.panel3.Size = new System.Drawing.Size(900, 217);
             this.panel3.TabIndex = 10;
             // 
-            // BtnFindProcess
-            // 
-            this.BtnFindProcess.Location = new System.Drawing.Point(504, 161);
-            this.BtnFindProcess.Name = "BtnFindProcess";
-            this.BtnFindProcess.Size = new System.Drawing.Size(263, 39);
-            this.BtnFindProcess.TabIndex = 24;
-            this.BtnFindProcess.Text = "İşlemi Bul";
-            this.BtnFindProcess.UseVisualStyleBackColor = true;
-            this.BtnFindProcess.Click += new System.EventHandler(this.BtnFindProcess_Click);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -276,6 +255,7 @@
             // 
             // CmbBank
             // 
+            this.CmbBank.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(226)))));
             this.CmbBank.FormattingEnabled = true;
             this.CmbBank.Location = new System.Drawing.Point(176, 172);
             this.CmbBank.Name = "CmbBank";
@@ -284,7 +264,8 @@
             // 
             // BtnListProcesses
             // 
-            this.BtnListProcesses.Location = new System.Drawing.Point(504, 116);
+            this.BtnListProcesses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnListProcesses.Location = new System.Drawing.Point(504, 164);
             this.BtnListProcesses.Name = "BtnListProcesses";
             this.BtnListProcesses.Size = new System.Drawing.Size(263, 39);
             this.BtnListProcesses.TabIndex = 21;
@@ -294,7 +275,8 @@
             // 
             // BtnAddProcess
             // 
-            this.BtnAddProcess.Location = new System.Drawing.Point(504, 73);
+            this.BtnAddProcess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAddProcess.Location = new System.Drawing.Point(504, 121);
             this.BtnAddProcess.Name = "BtnAddProcess";
             this.BtnAddProcess.Size = new System.Drawing.Size(263, 39);
             this.BtnAddProcess.TabIndex = 20;
@@ -304,6 +286,7 @@
             // 
             // RchDescription
             // 
+            this.RchDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(226)))));
             this.RchDescription.Location = new System.Drawing.Point(504, 16);
             this.RchDescription.Name = "RchDescription";
             this.RchDescription.Size = new System.Drawing.Size(263, 48);
@@ -312,6 +295,7 @@
             // 
             // TxtAmount
             // 
+            this.TxtAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(226)))));
             this.TxtAmount.Location = new System.Drawing.Point(176, 133);
             this.TxtAmount.Name = "TxtAmount";
             this.TxtAmount.Size = new System.Drawing.Size(181, 30);
@@ -319,6 +303,7 @@
             // 
             // TxtProcessType
             // 
+            this.TxtProcessType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(226)))));
             this.TxtProcessType.Location = new System.Drawing.Point(176, 94);
             this.TxtProcessType.Name = "TxtProcessType";
             this.TxtProcessType.Size = new System.Drawing.Size(181, 30);
@@ -389,6 +374,32 @@
             this.dataGridView1.Size = new System.Drawing.Size(900, 296);
             this.dataGridView1.TabIndex = 0;
             // 
+            // TxtFind
+            // 
+            this.TxtFind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(226)))));
+            this.TxtFind.ForeColor = System.Drawing.Color.DimGray;
+            this.TxtFind.Location = new System.Drawing.Point(504, 70);
+            this.TxtFind.Multiline = true;
+            this.TxtFind.Name = "TxtFind";
+            this.TxtFind.Size = new System.Drawing.Size(260, 36);
+            this.TxtFind.TabIndex = 27;
+            this.TxtFind.Text = "Ara";
+            this.TxtFind.TextChanged += new System.EventHandler(this.TxtFind_TextChanged);
+            this.TxtFind.Enter += new System.EventHandler(this.TxtFind_Enter);
+            this.TxtFind.Leave += new System.EventHandler(this.TxtFind_Leave);
+            // 
+            // PbMinimize
+            // 
+            this.PbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PbMinimize.Image = global::FinancialCrm.Properties.Resources.icons8_minimize_50;
+            this.PbMinimize.Location = new System.Drawing.Point(1111, 3);
+            this.PbMinimize.Name = "PbMinimize";
+            this.PbMinimize.Size = new System.Drawing.Size(57, 43);
+            this.PbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbMinimize.TabIndex = 11;
+            this.PbMinimize.TabStop = false;
+            this.PbMinimize.Click += new System.EventHandler(this.PbMinimize_Click);
+            // 
             // FrmBankProcesses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -411,12 +422,12 @@
             this.Load += new System.EventHandler(this.FrmBankProcesses_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -451,6 +462,6 @@
         private System.Windows.Forms.ComboBox CmbBank;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button BtnFindProcess;
+        private System.Windows.Forms.TextBox TxtFind;
     }
 }
