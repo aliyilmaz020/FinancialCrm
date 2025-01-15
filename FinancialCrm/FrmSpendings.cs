@@ -29,14 +29,15 @@ namespace FinancialCrm
         }
         void GetSpendings()
         {
+            //inner join
             var values = db.Spendings.Join(db.Categories, d1 => d1.CategoryId, d2 => d2.CategoryId, (d1, d2) => new { d1, d2 })
                 .Select(x => new
                 {
-                    x.d1.SpendingId,
-                    x.d1.SpendingTitle,
-                    x.d1.SpendingAmount,
-                    x.d1.SpendingDate,
-                    x.d2.CategoryName
+                    HarcamaId = x.d1.SpendingId,
+                    Başlık = x.d1.SpendingTitle,
+                    Miktar = x.d1.SpendingAmount,
+                    Tarih = x.d1.SpendingDate,
+                    Kategori = x.d2.CategoryName
                 }).ToList();
             dataGridView1.DataSource = values;
         }
@@ -63,7 +64,7 @@ namespace FinancialCrm
                 Spendings sp = new Spendings();
                 sp.SpendingTitle = TxtSpendingTitle.Text;
                 sp.SpendingDate = DateTime.Parse(DtpSpendingDate.Text);
-                sp.SpendingAmount = decimal.Parse(TxtAmount.Text);
+                sp.SpendingAmount = decimal.Parse(TxtAmount.Text.Replace(".",","));
                 sp.CategoryId = int.Parse(CmbCategory.SelectedValue.ToString());
                 db.Spendings.Add(sp);
                 db.SaveChanges();
@@ -77,7 +78,7 @@ namespace FinancialCrm
             Clean();
         }
 
-        private void BtnUpdateSpending_Click(object sender, EventArgs e)
+        private void BtnRemoveSpending_Click(object sender, EventArgs e)
         {
             try
             {
@@ -95,7 +96,7 @@ namespace FinancialCrm
             Clean();
         }
 
-        private void BtnRemoveSpending_Click(object sender, EventArgs e)
+        private void BtnUpdateSpending_Click(object sender, EventArgs e)
         {
             try
             {
@@ -104,7 +105,7 @@ namespace FinancialCrm
                 updateSpending.CategoryId = int.Parse(CmbCategory.SelectedValue.ToString());
                 updateSpending.SpendingDate = DateTime.Parse(DtpSpendingDate.Text);
                 updateSpending.SpendingTitle = TxtSpendingTitle.Text;
-                updateSpending.SpendingAmount = decimal.Parse(TxtAmount.Text);
+                updateSpending.SpendingAmount = decimal.Parse(TxtAmount.Text.Replace(".", ","));
                 db.SaveChanges();
                 MessageBox.Show("Harcama bilgileri başarıyla güncellendi.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 GetSpendings();
@@ -178,6 +179,15 @@ namespace FinancialCrm
         private void PbMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TxtSpendingId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            TxtSpendingTitle.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            TxtAmount.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            DtpSpendingDate.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            CmbCategory.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
     }
 }

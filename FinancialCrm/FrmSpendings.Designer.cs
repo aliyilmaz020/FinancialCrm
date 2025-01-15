@@ -77,12 +77,13 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(907, 275);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // BtnUpdateSpending
             // 
             this.BtnUpdateSpending.BackColor = System.Drawing.Color.AntiqueWhite;
             this.BtnUpdateSpending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnUpdateSpending.Location = new System.Drawing.Point(503, 106);
+            this.BtnUpdateSpending.Location = new System.Drawing.Point(502, 112);
             this.BtnUpdateSpending.Name = "BtnUpdateSpending";
             this.BtnUpdateSpending.Size = new System.Drawing.Size(263, 39);
             this.BtnUpdateSpending.TabIndex = 24;
@@ -112,7 +113,7 @@
             // 
             this.BtnListSpending.BackColor = System.Drawing.Color.AntiqueWhite;
             this.BtnListSpending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnListSpending.Location = new System.Drawing.Point(503, 16);
+            this.BtnListSpending.Location = new System.Drawing.Point(502, 22);
             this.BtnListSpending.Name = "BtnListSpending";
             this.BtnListSpending.Size = new System.Drawing.Size(263, 39);
             this.BtnListSpending.TabIndex = 21;
@@ -124,7 +125,7 @@
             // 
             this.BtnAddSpending.BackColor = System.Drawing.Color.AntiqueWhite;
             this.BtnAddSpending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAddSpending.Location = new System.Drawing.Point(503, 61);
+            this.BtnAddSpending.Location = new System.Drawing.Point(502, 67);
             this.BtnAddSpending.Name = "BtnAddSpending";
             this.BtnAddSpending.Size = new System.Drawing.Size(263, 39);
             this.BtnAddSpending.TabIndex = 20;
@@ -198,7 +199,7 @@
             // 
             this.BtnRemoveSpending.BackColor = System.Drawing.Color.AntiqueWhite;
             this.BtnRemoveSpending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRemoveSpending.Location = new System.Drawing.Point(503, 151);
+            this.BtnRemoveSpending.Location = new System.Drawing.Point(502, 157);
             this.BtnRemoveSpending.Name = "BtnRemoveSpending";
             this.BtnRemoveSpending.Size = new System.Drawing.Size(263, 39);
             this.BtnRemoveSpending.TabIndex = 27;
@@ -386,9 +387,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(12, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 25);
+            this.label1.Size = new System.Drawing.Size(88, 25);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Faturalar";
+            this.label1.Text = "Giderler";
             // 
             // FrmSpendings
             // 

@@ -26,7 +26,11 @@ namespace FinancialCrm
         }
         void GetCategory()
         {
-            var values = db.Categories.ToList();
+            var values = db.Categories.Select(x => new
+            {
+                ID = x.CategoryId,
+                KategoriAdı = x.CategoryName
+            }).ToList();
             dataGridView1.DataSource = values;
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

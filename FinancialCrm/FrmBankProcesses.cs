@@ -35,6 +35,7 @@ namespace FinancialCrm
         }
         private void FrmBankProcesses_Load(object sender, EventArgs e)
         {
+            GetProcesses();
             var banks = db.Banks.Select(x => new
             {
                 x.BankId,
@@ -54,7 +55,7 @@ namespace FinancialCrm
             {
                 BankProcesses bp = new BankProcesses();
                 bp.Description = RchDescription.Text;
-                bp.Amount = decimal.Parse(TxtAmount.Text);
+                bp.Amount = decimal.Parse(TxtAmount.Text.Replace(".", ","));
                 bp.ProcessDate = DateTime.Parse(DtpProcessDate.Text);
                 bp.ProcessType = TxtProcessType.Text;
                 bp.BankId = int.Parse(CmbBank.SelectedValue.ToString());
@@ -69,7 +70,26 @@ namespace FinancialCrm
             }
             Clean();
         }
-
+        private void BtnUpdateProcess_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = int.Parse(TxtBankProcessId.Text);
+                var updateProcess = db.BankProcesses.Find(id);
+                updateProcess.ProcessDate = DateTime.Parse(DtpProcessDate.Text);
+                updateProcess.ProcessType = TxtProcessType.Text;
+                updateProcess.Amount = decimal.Parse(TxtAmount.Text.Replace(".",","));
+                updateProcess.BankId = int.Parse(CmbBank.SelectedValue.ToString());
+                updateProcess.Description = RchDescription.Text;
+                db.SaveChanges();
+                MessageBox.Show("İşleminiz Başarıyla Güncellenmiştir.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                GetProcesses();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Alanlar boş geçilemez.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
         private void BtnBanks_Click(object sender, EventArgs e)
         {
             FrmBanks frm = new FrmBanks();
@@ -164,6 +184,16 @@ namespace FinancialCrm
                 }).ToList();
             dataGridView1.DataSource = values;
 
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TxtBankProcessId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            RchDescription.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            DtpProcessDate.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            TxtProcessType.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            TxtAmount.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            CmbBank.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
         }
     }
 }

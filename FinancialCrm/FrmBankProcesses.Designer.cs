@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBankProcesses));
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.PbMinimize = new System.Windows.Forms.PictureBox();
             this.BtnLogout = new System.Windows.Forms.Button();
             this.BtnSettings = new System.Windows.Forms.Button();
             this.BtnDashboard = new System.Windows.Forms.Button();
@@ -43,6 +44,7 @@
             this.TxtBankProcessId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.TxtFind = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.CmbBank = new System.Windows.Forms.ComboBox();
             this.BtnListProcesses = new System.Windows.Forms.Button();
@@ -57,14 +59,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.TxtFind = new System.Windows.Forms.TextBox();
-            this.PbMinimize = new System.Windows.Forms.PictureBox();
+            this.BtnUpdateProcess = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -89,6 +90,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1172, 46);
             this.panel2.TabIndex = 7;
+            // 
+            // PbMinimize
+            // 
+            this.PbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PbMinimize.Image = global::FinancialCrm.Properties.Resources.icons8_minimize_50;
+            this.PbMinimize.Location = new System.Drawing.Point(1111, 3);
+            this.PbMinimize.Name = "PbMinimize";
+            this.PbMinimize.Size = new System.Drawing.Size(57, 43);
+            this.PbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbMinimize.TabIndex = 11;
+            this.PbMinimize.TabStop = false;
+            this.PbMinimize.Click += new System.EventHandler(this.PbMinimize_Click);
             // 
             // BtnLogout
             // 
@@ -224,6 +237,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel3.Controls.Add(this.BtnUpdateProcess);
             this.panel3.Controls.Add(this.TxtFind);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.CmbBank);
@@ -243,6 +257,20 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(900, 217);
             this.panel3.TabIndex = 10;
+            // 
+            // TxtFind
+            // 
+            this.TxtFind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(226)))));
+            this.TxtFind.ForeColor = System.Drawing.Color.DimGray;
+            this.TxtFind.Location = new System.Drawing.Point(504, 70);
+            this.TxtFind.Multiline = true;
+            this.TxtFind.Name = "TxtFind";
+            this.TxtFind.Size = new System.Drawing.Size(260, 36);
+            this.TxtFind.TabIndex = 27;
+            this.TxtFind.Text = "Ara";
+            this.TxtFind.TextChanged += new System.EventHandler(this.TxtFind_TextChanged);
+            this.TxtFind.Enter += new System.EventHandler(this.TxtFind_Enter);
+            this.TxtFind.Leave += new System.EventHandler(this.TxtFind_Leave);
             // 
             // label7
             // 
@@ -267,7 +295,7 @@
             this.BtnListProcesses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnListProcesses.Location = new System.Drawing.Point(504, 164);
             this.BtnListProcesses.Name = "BtnListProcesses";
-            this.BtnListProcesses.Size = new System.Drawing.Size(263, 39);
+            this.BtnListProcesses.Size = new System.Drawing.Size(362, 39);
             this.BtnListProcesses.TabIndex = 21;
             this.BtnListProcesses.Text = "İşlemleri Listele";
             this.BtnListProcesses.UseVisualStyleBackColor = true;
@@ -278,7 +306,7 @@
             this.BtnAddProcess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAddProcess.Location = new System.Drawing.Point(504, 121);
             this.BtnAddProcess.Name = "BtnAddProcess";
-            this.BtnAddProcess.Size = new System.Drawing.Size(263, 39);
+            this.BtnAddProcess.Size = new System.Drawing.Size(178, 39);
             this.BtnAddProcess.TabIndex = 20;
             this.BtnAddProcess.Text = "İşlemi Kaydet";
             this.BtnAddProcess.UseVisualStyleBackColor = true;
@@ -373,32 +401,18 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(900, 296);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // TxtFind
+            // BtnUpdateProcess
             // 
-            this.TxtFind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(226)))));
-            this.TxtFind.ForeColor = System.Drawing.Color.DimGray;
-            this.TxtFind.Location = new System.Drawing.Point(504, 70);
-            this.TxtFind.Multiline = true;
-            this.TxtFind.Name = "TxtFind";
-            this.TxtFind.Size = new System.Drawing.Size(260, 36);
-            this.TxtFind.TabIndex = 27;
-            this.TxtFind.Text = "Ara";
-            this.TxtFind.TextChanged += new System.EventHandler(this.TxtFind_TextChanged);
-            this.TxtFind.Enter += new System.EventHandler(this.TxtFind_Enter);
-            this.TxtFind.Leave += new System.EventHandler(this.TxtFind_Leave);
-            // 
-            // PbMinimize
-            // 
-            this.PbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PbMinimize.Image = global::FinancialCrm.Properties.Resources.icons8_minimize_50;
-            this.PbMinimize.Location = new System.Drawing.Point(1111, 3);
-            this.PbMinimize.Name = "PbMinimize";
-            this.PbMinimize.Size = new System.Drawing.Size(57, 43);
-            this.PbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbMinimize.TabIndex = 11;
-            this.PbMinimize.TabStop = false;
-            this.PbMinimize.Click += new System.EventHandler(this.PbMinimize_Click);
+            this.BtnUpdateProcess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnUpdateProcess.Location = new System.Drawing.Point(688, 121);
+            this.BtnUpdateProcess.Name = "BtnUpdateProcess";
+            this.BtnUpdateProcess.Size = new System.Drawing.Size(178, 39);
+            this.BtnUpdateProcess.TabIndex = 28;
+            this.BtnUpdateProcess.Text = "İşlemi Güncelle";
+            this.BtnUpdateProcess.UseVisualStyleBackColor = true;
+            this.BtnUpdateProcess.Click += new System.EventHandler(this.BtnUpdateProcess_Click);
             // 
             // FrmBankProcesses
             // 
@@ -422,12 +436,12 @@
             this.Load += new System.EventHandler(this.FrmBankProcesses_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -463,5 +477,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox TxtFind;
+        private System.Windows.Forms.Button BtnUpdateProcess;
     }
 }

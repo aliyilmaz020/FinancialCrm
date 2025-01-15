@@ -28,7 +28,13 @@ namespace FinancialCrm
         }
         void GetBills()
         {
-            var values = db.Bills.ToList();
+            var values = db.Bills.Select(x=>new
+            {
+                FaturaID = x.BillId,
+                Başlık = x.BillTitle,
+                Miktar = x.BillAmount,
+                Dönem = x.BillPeriod
+            }).ToList();
             dataGridView1.DataSource = values;
         }
         private void FrmBilling_Load(object sender, EventArgs e)
@@ -45,7 +51,7 @@ namespace FinancialCrm
             {
                 Bills bills = new Bills();
                 bills.BillTitle = TxtBillTitle.Text;
-                bills.BillAmount = decimal.Parse(TxtBillAmount.Text);
+                bills.BillAmount = decimal.Parse(TxtBillAmount.Text.Replace(".", ","));
                 bills.BillPeriod = TxtBillPeriod.Text;
                 db.Bills.Add(bills);
                 db.SaveChanges();
@@ -84,7 +90,7 @@ namespace FinancialCrm
                 int id = int.Parse(TxtBillId.Text);
                 var updateValue = db.Bills.Find(id);
                 updateValue.BillTitle = TxtBillTitle.Text;
-                updateValue.BillAmount = decimal.Parse(TxtBillAmount.Text);
+                updateValue.BillAmount = decimal.Parse(TxtBillAmount.Text.Replace(".",","));
                 updateValue.BillPeriod = TxtBillPeriod.Text;
                 db.SaveChanges();
                 MessageBox.Show("Ödemeniz Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -159,6 +165,14 @@ namespace FinancialCrm
             frm.username = username;
             frm.Show();
             this.Hide();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TxtBillId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            TxtBillTitle.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            TxtBillAmount.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            TxtBillPeriod.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
     }
 }
