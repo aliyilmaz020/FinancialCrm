@@ -117,11 +117,11 @@
             // 
             // BtnCreateAccount
             // 
-            this.BtnCreateAccount.BackColor = System.Drawing.Color.LightCyan;
+            this.BtnCreateAccount.BackColor = System.Drawing.Color.PaleTurquoise;
             this.BtnCreateAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BtnCreateAccount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
             this.BtnCreateAccount.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(101)))), ((int)(((byte)(116)))));
-            this.BtnCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCreateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnCreateAccount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnCreateAccount.Location = new System.Drawing.Point(299, 255);
@@ -184,7 +184,6 @@
             this.MaximizeBox = false;
             this.Name = "FrmCreateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.FrmCreateAccount_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbMinimize)).EndInit();

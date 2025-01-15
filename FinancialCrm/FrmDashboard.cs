@@ -51,7 +51,7 @@ namespace FinancialCrm
             }).ToList();
             chart2.Series.Clear();
             var series2 = chart2.Series.Add("Faturalar");
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Funnel;
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             foreach (var item in billData)
             {
                 series2.Points.AddXY(item.BillTitle, item.BillAmount);

@@ -19,8 +19,13 @@ namespace FinancialCrm
             InitializeComponent();
         }
         FinancialCrmDbEntities db = new FinancialCrmDbEntities();
-        private void FrmLogin_Load(object sender, EventArgs e)
+        void Clean()
         {
+            TxtPassword.UseSystemPasswordChar = false;
+            TxtPassword.ForeColor = Color.Gray;
+            TxtUserName.ForeColor = Color.Gray;
+            TxtUserName.Text = "Kullanıcı Adı";
+            TxtPassword.Text = "Şifre";
         }
         int count = 0;
         private void BtnLogin_Click(object sender, EventArgs e)
@@ -39,6 +44,7 @@ namespace FinancialCrm
             {
                 MessageBox.Show("Kullanıcı adı ya da şifre hatalıdır.\nTekrar deneyiniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            Clean();
         }
 
         private void PbClose_Click(object sender, EventArgs e)

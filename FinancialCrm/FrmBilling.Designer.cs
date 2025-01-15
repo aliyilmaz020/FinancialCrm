@@ -214,7 +214,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel3.BackColor = System.Drawing.Color.Thistle;
             this.panel3.Controls.Add(this.BtnUpdateBill);
             this.panel3.Controls.Add(this.BtnDeleteBill);
             this.panel3.Controls.Add(this.BtnCreateBill);

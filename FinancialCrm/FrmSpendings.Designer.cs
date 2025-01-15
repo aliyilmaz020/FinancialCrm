@@ -158,7 +158,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel3.BackColor = System.Drawing.Color.Thistle;
             this.panel3.Controls.Add(this.TxtSpendingTitle);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.BtnRemoveSpending);
@@ -365,6 +365,7 @@
             this.PbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbMinimize.TabIndex = 11;
             this.PbMinimize.TabStop = false;
+            this.PbMinimize.Click += new System.EventHandler(this.PbMinimize_Click);
             // 
             // panel2
             // 

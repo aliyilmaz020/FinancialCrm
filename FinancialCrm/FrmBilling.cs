@@ -19,6 +19,13 @@ namespace FinancialCrm
         }
         FinancialCrmDbEntities db = new FinancialCrmDbEntities();
         public string username;
+        void Clean()
+        {
+            TxtBillAmount.Text = "";
+            TxtBillId.Text = "";
+            TxtBillPeriod.Text = "";
+            TxtBillTitle.Text = "";
+        }
         void GetBills()
         {
             var values = db.Bills.ToList();
@@ -49,7 +56,7 @@ namespace FinancialCrm
             {
                 MessageBox.Show("Alanlar boş geçilemez.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
+            Clean();
         }
 
         private void BtnDeleteBill_Click(object sender, EventArgs e)
@@ -67,7 +74,7 @@ namespace FinancialCrm
             {
                 MessageBox.Show("Alanlar boş geçilemez.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
+            Clean();
         }
 
         private void BtnUpdateBill_Click(object sender, EventArgs e)
@@ -87,7 +94,7 @@ namespace FinancialCrm
             {
                 MessageBox.Show("Alanlar boş geçilemez.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
+            Clean();
         }
 
         private void BtnBanks_Click(object sender, EventArgs e)

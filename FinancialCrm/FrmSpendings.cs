@@ -19,6 +19,14 @@ namespace FinancialCrm
         }
         FinancialCrmDbEntities db = new FinancialCrmDbEntities();
         public string username;
+        void Clean()
+        {
+            TxtAmount.Text = "";
+            TxtSpendingId.Text = "";
+            TxtSpendingTitle.Text = "";
+            DtpSpendingDate.Text = "";
+            CmbCategory.Text = "";
+        }
         void GetSpendings()
         {
             var values = db.Spendings.Join(db.Categories, d1 => d1.CategoryId, d2 => d2.CategoryId, (d1, d2) => new { d1, d2 })
@@ -60,13 +68,13 @@ namespace FinancialCrm
                 db.Spendings.Add(sp);
                 db.SaveChanges();
                 MessageBox.Show("Yeni harcama başarıyla kaydedildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                GetSpendings();
             }
             catch (Exception)
             {
                 MessageBox.Show("Yanlış ya da eksik bilgi girildi.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            Clean();
         }
 
         private void BtnUpdateSpending_Click(object sender, EventArgs e)
@@ -78,13 +86,13 @@ namespace FinancialCrm
                 db.Spendings.Remove(removeSpending);
                 db.SaveChanges();
                 MessageBox.Show("Harcama bilgileri başarıyla silindi.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                GetSpendings();
             }
             catch (Exception)
             {
                 MessageBox.Show("Yanlış ya da eksik bilgi girildi.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            Clean();
         }
 
         private void BtnRemoveSpending_Click(object sender, EventArgs e)
@@ -99,12 +107,13 @@ namespace FinancialCrm
                 updateSpending.SpendingAmount = decimal.Parse(TxtAmount.Text);
                 db.SaveChanges();
                 MessageBox.Show("Harcama bilgileri başarıyla güncellendi.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                GetSpendings();
             }
             catch (Exception)
             {
                 MessageBox.Show("Yanlış ya da eksik bilgi girildi.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            Clean();
         }
 
         private void BtnCategories_Click(object sender, EventArgs e)
@@ -164,6 +173,11 @@ namespace FinancialCrm
                 FrmLogin frm = new FrmLogin();
                 frm.Show();
             }
+        }
+
+        private void PbMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

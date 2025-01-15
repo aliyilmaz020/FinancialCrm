@@ -19,6 +19,11 @@ namespace FinancialCrm
         }
         public string username;
         FinancialCrmDbEntities db = new FinancialCrmDbEntities();
+        void Clean()
+        {
+            TxtCategoryId.Text = "";
+            TxtCategoryName.Text = "";
+        }
         void GetCategory()
         {
             var values = db.Categories.ToList();
@@ -36,29 +41,57 @@ namespace FinancialCrm
         }
         private void BtnAddCategory_Click(object sender, EventArgs e)
         {
-            Categories category = new Categories();
-            category.CategoryName = TxtCategoryName.Text;
-            db.Categories.Add(category);
-            db.SaveChanges();
-            MessageBox.Show("Yeni Kategori Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                Categories category = new Categories();
+                category.CategoryName = TxtCategoryName.Text;
+                db.Categories.Add(category);
+                db.SaveChanges();
+                MessageBox.Show("Yeni Kategori Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                GetCategory();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Yanlış ya da eksik bilgi girildi.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            Clean();
         }
 
         private void BtnUpdateCategory_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(TxtCategoryId.Text);
-            var updateCategory = db.Categories.Find(id);
-            updateCategory.CategoryName = TxtCategoryName.Text;
-            db.SaveChanges();
-            MessageBox.Show("Kategori Güncellendi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            try
+            {
+                int id = int.Parse(TxtCategoryId.Text);
+                var updateCategory = db.Categories.Find(id);
+                updateCategory.CategoryName = TxtCategoryName.Text;
+                db.SaveChanges();
+                MessageBox.Show("Kategori Güncellendi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                GetCategory();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Yanlış ya da eksik bilgi girildi.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            Clean();
+
         }
 
         private void BtnDeleteCategory_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(TxtCategoryId.Text);
-            var removeCategory = db.Categories.Find(id);
-            db.Categories.Remove(removeCategory);
-            db.SaveChanges();
-            MessageBox.Show("Kategori Silindi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            try
+            {
+                int id = int.Parse(TxtCategoryId.Text);
+                var removeCategory = db.Categories.Find(id);
+                db.Categories.Remove(removeCategory);
+                db.SaveChanges();
+                MessageBox.Show("Kategori Silindi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                GetCategory();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Yanlış ya da eksik bilgi girildi.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            Clean();
         }
         private void FrmCategories_Load(object sender, EventArgs e)
         {
@@ -115,12 +148,10 @@ namespace FinancialCrm
                 frm.Show();
             }
         }
-
         private void PbMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
         private void BtnSpendings_Click(object sender, EventArgs e)
         {
             FrmSpendings frm = new FrmSpendings();

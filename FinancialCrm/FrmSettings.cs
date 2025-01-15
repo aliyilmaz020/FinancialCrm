@@ -19,6 +19,15 @@ namespace FinancialCrm
         }
         public string username;
         FinancialCrmDbEntities db = new FinancialCrmDbEntities();
+        void Clean()
+        {
+            TxtPassword.UseSystemPasswordChar = false;
+            TxtConfirmPassword.UseSystemPasswordChar = false;
+            TxtPassword.ForeColor = Color.LightGray;
+            TxtConfirmPassword.ForeColor = Color.LightGray;
+            TxtPassword.Text = "Yeni Şifre";
+            TxtConfirmPassword.Text = "Yeni Şifreyi Onayla";
+        }
         private void FrmSettings_Load(object sender, EventArgs e)
         {
             LblUsername.Text = username;
@@ -37,6 +46,7 @@ namespace FinancialCrm
             {
                 MessageBox.Show("Girilen şifreler eşleşmiyor.\nTekrar deneyiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            Clean();
         }
         private void PbMinimize_Click(object sender, EventArgs e)
         {

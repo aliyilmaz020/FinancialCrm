@@ -24,6 +24,15 @@ namespace FinancialCrm
             var processes = db.ListBankProcess().ToList();
             dataGridView1.DataSource = processes;
         }
+        void Clean()
+        {
+            TxtBankProcessId.Text = "";
+            TxtAmount.Text = "";
+            DtpProcessDate.Text = "";
+            TxtProcessType.Text = "";
+            CmbBank.Text = "";
+            RchDescription.Text = "";
+        }
         private void FrmBankProcesses_Load(object sender, EventArgs e)
         {
             var banks = db.Banks.Select(x => new
@@ -58,6 +67,7 @@ namespace FinancialCrm
             {
                 MessageBox.Show("Alanlar boş geçilemez.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            Clean();
         }
 
         private void BtnBanks_Click(object sender, EventArgs e)
@@ -119,6 +129,7 @@ namespace FinancialCrm
                     d1.z.BankTitle
                 }).ToList();
             dataGridView1.DataSource = findProcess;
+            Clean();
         }
 
         private void BtnCategories_Click(object sender, EventArgs e)

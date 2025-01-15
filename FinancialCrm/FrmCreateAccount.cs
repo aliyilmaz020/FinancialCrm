@@ -18,27 +18,40 @@ namespace FinancialCrm
             InitializeComponent();
         }
         FinancialCrmDbEntities db = new FinancialCrmDbEntities();
-        private void FrmCreateAccount_Load(object sender, EventArgs e)
+        void Clean()
         {
-
+            TxtPassword.UseSystemPasswordChar = false;
+            TxtPassword.Text = "Şifre";
+            TxtUserName.Text = "Kullanıcı Adı";
+            TxtPassword.ForeColor = Color.Gray;
+            TxtUserName.ForeColor = Color.Gray;
         }
         private void BtnCreateAccount_Click(object sender, EventArgs e)
         {
             string username = TxtUserName.Text;
             string password = TxtPassword.Text;
-            if (username != "" && password != "" && username != "Kullanıcı Adı" && password != "Şifre")
+            bool isUser = db.Users.Any(u => u.Username == username); //Kullanıcı kontrolü
+            if (isUser == false)
             {
-                Users user = new Users();
-                user.Username = username;
-                user.Password = password;
-                db.Users.Add(user);
-                db.SaveChanges();
-                MessageBox.Show("Hesabınız Oluşturuldu", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (username != "" && password != "" && username != "Kullanıcı Adı" && password != "Şifre")
+                {
+                    Users user = new Users();
+                    user.Username = username;
+                    user.Password = password;
+                    db.Users.Add(user);
+                    db.SaveChanges();
+                    MessageBox.Show("Hesabınız Oluşturuldu", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Eksik bir tuşlama yapıldı.\nTekrar deneyiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {
-                MessageBox.Show("Eksik bir tuşlama yapıldı.\nTekrar deneyiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bu kullanıcı adı sistemde mevcuttur.","Uyarı",MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            Clean();
         }
 
 
