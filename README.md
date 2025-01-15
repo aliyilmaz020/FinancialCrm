@@ -1,6 +1,8 @@
 # Finansal CRM Projesi
 Bu proje, finansal hizmetler sektöründe müşteri ilişkilerini yönetmek amacıyla geliştirilmiş bir uygulamadır. Bu proje, finansal kurumların müşterileriyle daha etkili ve verimli bir şekilde etkileşim kurmalarına yardımcı olur. Müşteriler bankalardaki bakiyelerini, faturalarını ve harcamalarını görüntüleyip yönetebilirler.
-![Image 1](https://github.com/aliyilmaz020/FinancialCrm/blob/master/FinancialCrm/images/login.png) ![Image 2](https://github.com/aliyilmaz020/FinancialCrm/blob/master/FinancialCrm/images/NewUser.png) 
+
+![Image 1](https://github.com/aliyilmaz020/FinancialCrm/blob/master/FinancialCrm/images/login.png) 
+![Image 2](https://github.com/aliyilmaz020/FinancialCrm/blob/master/FinancialCrm/images/NewUser.png) 
 ## Proje Detayları
 ### 📌 Sisteme Giriş ve Yeni Hesap Oluşturma
 Bu bölümde kullanıcılar, kullanıcı adı ve şifreleriyle sisteme giriş yapabilir. Eğer sistemde tanımlı kullanıcı hesabı yoksa yeni hesap oluşturabilirler.
